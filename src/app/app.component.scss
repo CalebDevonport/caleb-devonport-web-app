@@ -1,0 +1,51 @@
+.whole-page {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidenav-container {
+  flex: 1;
+}
+
+mat-sidenav {
+  width: 250px;
+  background: #222729
+}
+
+.sidenav-content {
+  text-align:center;
+  padding: 25px;
+}
+
+.main-container {
+  display: flex;
+  height: 100%;
+  padding-top: 25px;
+}
+
+.content-border {
+  flex:1;
+}
+
+.page-content {
+  flex:999;
+  max-width: min(800px, 90%);
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.profile-image {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+}
