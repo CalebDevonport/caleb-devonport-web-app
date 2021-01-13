@@ -1,40 +1,24 @@
 <div class="whole-page">
-  <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-container>
     <mat-sidenav opened mode="side">
-      <div class="sidenav-content">
-        <!-- <app-nav></app-nav> -->
-        <img class="profile-image" src="assets/images/linkedIn.png">
-        <h1>Information</h1>
-        <p>Software Engineer</p>
-        <p>York</p>
-      </div>
+      <app-sidenav></app-sidenav>
     </mat-sidenav>
     <mat-sidenav-content>
       <div class="main-container">
-        <div class="content-border"></div>
-        <div class="page-content">
-          <img src="assets/images/CrabPic.jpg" style="max-height: 60%;">
-          <h1>
-            Welcome to my website!
-          </h1>
-          <div style="padding-bottom:25px;">
-            <img src="assets/images/DoomPanorama.jpg">
-          </div>
-          <div style="padding-bottom:25px;">
-            <img src="assets/images/DoomPanorama.jpg" >
-          </div>
-          <div style="padding-bottom:25px;">
-            <h1>Testing the bottom</h1>
+        <div class="border"></div>
+        <div class="toolbar-container">
+          <app-toolbar></app-toolbar>
+        </div>
+        <div class="border"></div>
+      </div>
+      <div class="main-container" style="padding-top: 64px;">
+        <div class="border"></div>
+        <div class="content-container">
+          <div class="page-content">
+            <app-home></app-home>
           </div>
         </div>
-        <!-- <div class="hamburger">
-          <button mat-icon-button>
-            (click)="snav.toggle()">
-          <mat-icon>menu</mat-icon></button>
-        </div> -->
-        <!-- <router-outlet></router-outlet>
-        <app-footer></app-footer> -->
-        <div class="content-border"></div>
+        <div class="border"></div>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

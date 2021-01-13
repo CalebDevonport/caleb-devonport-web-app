@@ -6,46 +6,35 @@
   bottom: 0;
   left: 0;
   right: 0;
+  // background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  // background: linear-gradient(90deg, rgba(32,30,36,1) 0%, rgba(45,45,74,1) 35%, rgba(73,105,111,1) 100%);
+  background-color: #1A1A1D;
 }
 
-.sidenav-container {
+mat-sidenav-container {
   flex: 1;
-}
-
-mat-sidenav {
-  width: 250px;
-  background: #222729
-}
-
-.sidenav-content {
-  text-align:center;
-  padding: 25px;
 }
 
 .main-container {
   display: flex;
-  height: 100%;
-  padding-top: 25px;
 }
 
-.content-border {
+.border {
   flex:1;
+}
+
+.toolbar-container {
+  flex:999 1 auto;
+  max-width: 1000px;
+}
+
+.content-container {
+  flex:999;
+  max-width: min(1000px, 90%);
 }
 
 .page-content {
   flex:999;
-  max-width: min(800px, 90%);
+  // max-width: min(800px, 90%);
   text-align: center;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-.profile-image {
-  width: 175px;
-  height: 175px;
-  border-radius: 50%;
 }
