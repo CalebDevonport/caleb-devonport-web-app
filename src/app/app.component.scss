@@ -19,6 +19,12 @@ mat-sidenav-container {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .main-container {
+    padding-top: 64px;
+  }
+}
+
 .border {
   flex:1;
 }
@@ -31,14 +37,4 @@ mat-sidenav-container {
 .content-container {
   flex:999;
   max-width: min(1000px, 90%);
-}
-
-.page-content {
-  flex:999;
-  // max-width: min(800px, 90%);
-  text-align: center;
-}
-
-.with-header {
-  padding-top: 64px;
 }

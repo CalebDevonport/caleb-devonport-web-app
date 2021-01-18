@@ -1,11 +1,11 @@
 <div class="whole-page">
   <mat-sidenav-container>
-    <mat-sidenav opened [mode]="value === true ? 'over' : 'side'">
+    <mat-sidenav opened [mode]="mode">
       <app-sidenav></app-sidenav>
     </mat-sidenav>
     <mat-sidenav-content>
-      <app-toolbar *ngIf="value"></app-toolbar>
-      <div class="main-container" [ngClass]="{'with-header': value}">
+      <app-toolbar *ngIf="isMobile"></app-toolbar>
+      <div class="main-container">
         <div class="border"></div>
         <div class="content-container">
           <app-home></app-home>
