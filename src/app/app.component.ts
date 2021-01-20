@@ -1,19 +1,37 @@
-import { Component } from '@angular/core';
+import { MediaService } from './services';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  {
-  public get isMobile(): boolean {
-    const query = '(max-width: 768px)';
-    const mediaQueryList = window.matchMedia(query);
+export class AppComponent implements OnInit {
 
-    return mediaQueryList.matches ? true : false;
+  @ViewChild('sidenav') public sidenav: MatSidenav;
+
+  public opened: boolean;
+
+  public mode: string;
+
+  public isMobile: boolean;
+
+  private mediaService = new MediaService('(max-width: 768px)');
+
+  ngOnInit() {
+    this.mediaService.match$.subscribe(value => {
+      this.setView(value);
+    });
   }
 
-  public get mode(): string {
-    return this.isMobile ? 'over' : 'side';
-  } 
+  public toggleMenu():void {
+    this.sidenav.toggle();
+  }
+
+  private setView(value: boolean) {
+    this.isMobile = value;
+    this.opened = !value;
+    this.mode = value ? 'over' : 'side';
+  }
 }
