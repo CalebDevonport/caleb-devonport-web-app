@@ -9,26 +9,19 @@ handlers:
 
   - url: /
     static_files: dist/index.html
-    upload: dist/index.html
-  - url: /(.*)
+    upload: dist/.*
+  - url: /(.*\.js)
+    redirect_http_response_code: 301
+    static_files: dist/\1
+    upload: dist/.*\.js
+  - url: /(.*\.css)
+    redirect_http_response_code: 301
+    static_files: dist/\1
+    mime_type: text/css
+    upload: dist/.*\.css
+  - url: /.*
     static_files: dist/index.html
-    upload: dist/index.html
-
-- url: /
-  static_files: dist/index.html
-  upload: dist/.*
-- url: /(.*\.js)
-  redirect_http_response_code: 301
-  static_files: dist/\1
-  upload: dist/.*\.js
-- url: /(.*\.css)
-  redirect_http_response_code: 301
-  static_files: dist/\1
-  mime_type: text/css
-  upload: dist/.*\.css
-- url: /.*
-  static_files: dist/index.html
-  upload: dist/.*
+    upload: dist/.*
 
 skip_files:
   - e2e/
