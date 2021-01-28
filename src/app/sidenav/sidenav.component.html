@@ -1,7 +1,37 @@
 <div class="sidenav-content">
-  <!-- <app-nav></app-nav> -->
   <img class="profile-image" src="assets/images/linkedIn.png">
   <h1>Information</h1>
   <p>Software Engineer</p>
-  <p>York</p>
+  <p>London</p>
+  <hr>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/home" routerLinkActive #homeActive="routerLinkActive">
+          <h2 [ngClass]="{'is-active': homeActive.isActive}">First Component</h2>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/second" routerLinkActive #secondActive="routerLinkActive">
+          <h2 [ngClass]="{'is-active': secondActive.isActive}">Second Component</h2>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/third" routerLinkActive #thirdActive="routerLinkActive">
+          <h2 [ngClass]="{'is-active': thirdActive.isActive}">Third Component</h2>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/fourth" routerLinkActive #fourthActive="routerLinkActive">
+          <h2 [ngClass]="{'is-active': fourthActive.isActive}">Fourth Component</h2>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/fifth" routerLinkActive #fifthActive="routerLinkActive">
+          <h2 [ngClass]="{'is-active': fifthActive.isActive}">Fifth Component</h2>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <hr>
 </div>

@@ -8,3 +8,29 @@
   height: 175px;
   border-radius: 50%;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover > h2 {
+  color: darkgrey;
+}
+
+h1, h2, h3, p {
+  font-family: 'Merriweather Sans' !important;
+  font-weight: 400;
+}
+
+.is-active {
+  text-decoration: underline;
+}
