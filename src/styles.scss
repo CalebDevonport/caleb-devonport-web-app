@@ -28,3 +28,7 @@ hr {
   background-color:white;
   border-radius: 50%;
 }
+
+.mat-drawer-inner-container::-webkit-scrollbar {
+  display:none;
+}

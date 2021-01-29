@@ -1,0 +1,39 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height:100%
+}
+
+.border {
+  flex:100;
+}
+
+.content-container {
+  flex:1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover > h2 {
+  color: darkgrey;
+}
+
+h1, h2, h3, p {
+  font-family: 'Merriweather Sans' !important;
+  font-weight: 400;
+}
+
+.is-active {
+  text-decoration: underline;
+}
