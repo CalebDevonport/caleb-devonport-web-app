@@ -1,9 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
 img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  border-radius: 5%;
 }
 
 mat-sidenav {
@@ -31,4 +29,12 @@ hr {
 
 .mat-drawer-inner-container::-webkit-scrollbar {
   display:none;
+}
+
+.mat-drawer {
+  z-index: 101!important;
+}
+
+.mat-drawer-content {
+  z-index: auto!important;
 }

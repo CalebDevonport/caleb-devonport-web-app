@@ -1,0 +1,6 @@
+<div *ngIf="open" class="viewer-container" (click)="toggleFullscreen()">
+  <div class="viewer-content">
+    <img class="main-img" [src]="imageURL"/>
+  </div>
+</div>
+<div class="base-img" (click)="toggleFullscreen()"><img src={{imageURL}}></div>

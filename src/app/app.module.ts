@@ -15,6 +15,7 @@ import { FifthComponent } from './content/fifth';
 import { FooterComponent } from './sidenav/footer';
 import { HeaderComponent } from './sidenav/header';
 import { NavComponent } from './sidenav/nav';
+import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NavComponent } from './sidenav/nav';
     FifthComponent,
     FooterComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    ImageViewerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 .app-toolbar {
   position: fixed;
   top:0;
-  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+  z-index: 10; /* Ensure that your app's content doesn't overlap the toolbar */
   background-color: #383838;
   height: 64px;
   border-bottom: solid 1px rgba(255, 255, 255, 0.05);
