@@ -42,3 +42,4 @@ import { ImageViewerComponent } from './image-viewer/image-viewer.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
