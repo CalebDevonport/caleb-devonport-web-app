@@ -2,32 +2,32 @@
   <nav>
     <ul>
       <li>
-        <a routerLink="/home" routerLinkActive #homeActive="routerLinkActive">
+        <a routerLink="{{AppRoutes.Home}}" routerLinkActive #homeActive="routerLinkActive">
           <h2 [ngClass]="{'is-active': homeActive.isActive}">Home</h2>
         </a>
       </li>
       <li>
-        <a routerLink="/second" routerLinkActive #secondActive="routerLinkActive">
+        <a routerLink="{{AppRoutes.Second}}" routerLinkActive #secondActive="routerLinkActive">
           <h2 [ngClass]="{'is-active': secondActive.isActive}">CV</h2>
         </a>
       </li>
       <li>
-        <a routerLink="/third" routerLinkActive #thirdActive="routerLinkActive">
+        <a routerLink="{{AppRoutes.Third}}" routerLinkActive #thirdActive="routerLinkActive">
           <h2 [ngClass]="{'is-active': thirdActive.isActive}">Portfolio</h2>
         </a>
       </li>
       <li>
-        <a routerLink="/fourth" routerLinkActive #fourthActive="routerLinkActive">
+        <a routerLink="{{AppRoutes.Fourth}}" routerLinkActive #fourthActive="routerLinkActive">
           <h2 [ngClass]="{'is-active': fourthActive.isActive}">Blog</h2>
         </a>
       </li>
       <li>
-        <a routerLink="/game-reviews" routerLinkActive #gameReviewsActive="routerLinkActive">
+        <a routerLink="{{AppRoutes.GameReviews}}" routerLinkActive #gameReviewsActive="routerLinkActive">
           <h2 [ngClass]="{'is-active': gameReviewsActive.isActive}">Game Reviews</h2>
         </a>
       </li>
       <li>
-        <a routerLink="/sixth" routerLinkActive #sixthActive="routerLinkActive">
+        <a routerLink="{{AppRoutes.Sixth}}" routerLinkActive #sixthActive="routerLinkActive">
           <h2 [ngClass]="{'is-active': sixthActive.isActive}">Contact</h2>
         </a>
       </li>

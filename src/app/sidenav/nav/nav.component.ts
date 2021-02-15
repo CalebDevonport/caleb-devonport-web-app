@@ -1,3 +1,4 @@
+import { AppRoutes } from './../../routes';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+
+  public AppRoutes = AppRoutes;
 
   constructor() { }
 

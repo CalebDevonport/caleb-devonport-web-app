@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { MediaService } from './../../../services/media-service';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -12,17 +13,24 @@ export class ReviewBannerComponent implements OnInit {
   @Input() gameTitle: string;
   @Input() reviewScore: string;
   @Input() reviewDate: string;
+  @Input() route: string;
 
   public isMobile: boolean;
 
   private mediaService = new MediaService('(max-width: 768px)');
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.mediaService.match$.subscribe(value => {
       this.isMobile = value;
     });
+  }
+
+  public navigate() {
+    if(this.route !== null && this.route !== undefined) {
+      this.router.navigate([`./game-reviews/${this.route}`]);
+    }
   }
 
 }

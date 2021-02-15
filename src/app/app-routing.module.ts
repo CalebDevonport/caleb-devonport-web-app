@@ -1,9 +1,13 @@
-import { SixthComponent } from './content/sixth/sixth.component';
-import { GameReviewsComponent } from './content/game-reviews/game-reviews.component';
-import { FourthComponent } from './content/fourth/fourth.component';
-import { ThirdComponent } from './content/third/third.component';
-import { SecondComponent } from './content/second';
-import { HomeComponent } from './content/home';
+import { AppRoutes } from './routes';
+import {
+  LittleNightmaresTwoComponent,
+  SixthComponent,
+  GameReviewsComponent,
+  FourthComponent,
+  ThirdComponent,
+  SecondComponent,
+  HomeComponent
+ } from './content';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -14,27 +18,31 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: AppRoutes.Home,
     component: HomeComponent
   },
   {
-    path: 'second',
+    path: AppRoutes.Second,
     component: SecondComponent
   },
   {
-    path: 'third',
+    path: AppRoutes.Third,
     component: ThirdComponent
   },
   {
-    path: 'fourth',
+    path: AppRoutes.Fourth,
     component: FourthComponent
   },
   {
-    path: 'game-reviews',
+    path: AppRoutes.GameReviews,
     component: GameReviewsComponent
   },
   {
-    path: 'sixth',
+    path: AppRoutes.LittleNightmares2,
+    component: LittleNightmaresTwoComponent
+  },
+  {
+    path: AppRoutes.Sixth,
     component: SixthComponent
   },
   {

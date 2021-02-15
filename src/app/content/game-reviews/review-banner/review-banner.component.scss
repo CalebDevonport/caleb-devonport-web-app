@@ -27,11 +27,11 @@
     visibility: visible;
   }
 
-  #outer:hover {
+  .outer:hover {
     cursor: pointer;
   }
 
-  #outer:hover > #image {
+  .outer:hover > .image {
     opacity: 0.5;
   }
 }

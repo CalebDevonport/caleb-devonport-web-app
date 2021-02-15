@@ -1,6 +1,6 @@
-<div class="outer" id="outer">
-  <div class="image" id="image" [ngStyle]="{ 'background-image': 'url(' + imageURL + ')'}"></div>
-  <div class="text" id="text">
+<div class="outer" (click)="navigate()">
+  <div class="image" [ngStyle]="{ 'background-image': 'url(' + imageURL + ')'}"></div>
+  <div class="text">
     <h2>{{gameTitle}}</h2>
     <h3 *ngIf="!isMobile">Review score: {{reviewScore}}</h3>
     <h3 *ngIf="!isMobile">Reviewed on: {{reviewDate}}</h3>

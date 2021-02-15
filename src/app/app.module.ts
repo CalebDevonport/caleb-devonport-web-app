@@ -18,6 +18,7 @@ import { NavComponent } from './sidenav/nav';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { ReviewBannerComponent } from './content/game-reviews/review-banner/review-banner.component';
 import { SixthComponent } from './content/sixth/sixth.component';
+import { LittleNightmaresTwoComponent } from './content/game-reviews/reviews/little-nightmares-two/little-nightmares-two.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SixthComponent } from './content/sixth/sixth.component';
     NavComponent,
     ImageViewerComponent,
     ReviewBannerComponent,
-    SixthComponent
+    SixthComponent,
+    LittleNightmaresTwoComponent
   ],
   imports: [
     BrowserModule,
@@ -46,4 +48,3 @@ import { SixthComponent } from './content/sixth/sixth.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
