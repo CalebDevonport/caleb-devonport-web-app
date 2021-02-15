@@ -1,4 +1,5 @@
-import { FifthComponent } from './content/fifth/fifth.component';
+import { SixthComponent } from './content/sixth/sixth.component';
+import { GameReviewsComponent } from './content/game-reviews/game-reviews.component';
 import { FourthComponent } from './content/fourth/fourth.component';
 import { ThirdComponent } from './content/third/third.component';
 import { SecondComponent } from './content/second';
@@ -29,8 +30,12 @@ const routes: Routes = [
     component: FourthComponent
   },
   {
-    path: 'fifth',
-    component: FifthComponent
+    path: 'game-reviews',
+    component: GameReviewsComponent
+  },
+  {
+    path: 'sixth',
+    component: SixthComponent
   },
   {
     path: '**',

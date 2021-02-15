@@ -31,10 +31,10 @@ mat-sidenav-container {
 
 .toolbar-container {
   flex:999 1 auto;
-  max-width: 800px;
+  max-width: 650px;
 }
 
 .content-container {
   flex:999;
-  max-width: min(800px, 90%);
+  max-width: min(650px, 90%);
 }
