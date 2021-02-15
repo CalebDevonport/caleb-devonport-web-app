@@ -11,15 +11,27 @@ a {
   text-decoration: none;
 }
 
-a:hover > h2 {
+a:hover > h2, a:hover > h4, .icon:hover {
   color: darkgrey;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
   font-family: 'Merriweather Sans' !important;
   font-weight: 400;
 }
 
 .is-active {
   text-decoration: underline;
+}
+
+.flex-container {
+  display: flex;
+  align-items:center;
+  margin-top: -1.5rem;
+  margin-bottom: -1.5rem;
+}
+
+.icon {
+  color:white;
+  vertical-align: middle;
 }

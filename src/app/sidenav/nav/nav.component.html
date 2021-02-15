@@ -22,9 +22,24 @@
         </a>
       </li>
       <li>
-        <a routerLink="{{AppRoutes.GameReviews}}" routerLinkActive #gameReviewsActive="routerLinkActive">
-          <h2 [ngClass]="{'is-active': gameReviewsActive.isActive}">Game Reviews</h2>
-        </a>
+        <div class="flex-container">
+          <div style="flex:1;"></div>
+          <div style="flex:100;">
+            <a routerLink="{{AppRoutes.GameReviews}}" routerLinkActive #gameReviewsActive="routerLinkActive">
+              <h2 [ngClass]="{'is-active': gameReviewsActive.isActive}">Game reviews</h2>
+            </a>
+          </div>
+          <div style="flex:1;">
+            <mat-icon (click)="toggleSubList()" class="icon" >keyboard_arrow_down</mat-icon>
+          </div>
+        </div>
+        <ul *ngIf="subListOpen">
+          <li>
+            <a routerLink="{{AppRoutes.LittleNightmares2}}" routerLinkActive #littleNightmaresTwoActive="routerLinkActive">
+              <h4 [ngClass]="{'is-active': littleNightmaresTwoActive.isActive}">Little Nightmares 2</h4>
+            </a>
+          </li>
+        </ul>
       </li>
       <li>
         <a routerLink="{{AppRoutes.Sixth}}" routerLinkActive #sixthActive="routerLinkActive">

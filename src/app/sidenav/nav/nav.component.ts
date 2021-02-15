@@ -10,9 +10,15 @@ export class NavComponent implements OnInit {
 
   public AppRoutes = AppRoutes;
 
+  public subListOpen = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public toggleSubList() {
+    this.subListOpen = !this.subListOpen;
   }
 
 }
