@@ -28,8 +28,8 @@ export class ReviewBannerComponent implements OnInit {
   }
 
   public navigate() {
-    if(this.route !== null && this.route !== undefined) {
-      this.router.navigate([`./game-reviews/${this.route}`]);
+    if(this.route) {
+      this.router.navigate([`./${this.route}`]);
     }
   }
 

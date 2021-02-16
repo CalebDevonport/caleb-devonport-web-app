@@ -1,47 +1,14 @@
 <div class="text-center">
   <h1>Game Reviews</h1>
   <hr>
-  <app-review-banner
-    [imageURL]='"assets/images/little-nightmares-2-banner.png"'
-    [gameTitle]='"Little Nightmares 2"'
-    [reviewScore]='"8/10"'
-    [reviewDate]='"15/02/2021"'
-    [route]='"little-nightmares-2"'>
-  </app-review-banner>
-  <br>
-  <app-review-banner
-    [imageURL]='"assets/images/doom-panorama.jpg"'
-    [gameTitle]='"Doom 2016"'
-    [reviewScore]='"7.5/10"'
-    [reviewDate]='"12/08/2016"'>
-  </app-review-banner>
-  <br>
-  <app-review-banner
-    [imageURL]='"assets/images/destiny-2-banner.jpg"'
-    [gameTitle]='"Destiny 2 Beyond Light"'
-    [reviewScore]='"8/10"'
-    [reviewDate]='"15/02/2021"'>
-  </app-review-banner>
-  <br>
-  <app-review-banner
-    [imageURL]='"assets/images/inside-banner.png"'
-    [gameTitle]='"Inside"'
-    [reviewScore]='"7.5/10"'
-    [reviewDate]='"12/08/2016"'>
-  </app-review-banner>
-  <br>
-  <app-review-banner
-  [imageURL]='"assets/images/valorant-banner.jpg"'
-  [gameTitle]='"Valorant"'
-  [reviewScore]='"8/10"'
-  [reviewDate]='"15/02/2021"'>
-  </app-review-banner>
-  <br>
-  <app-review-banner
-    [imageURL]='"assets/images/fall-guys-banner.png"'
-    [gameTitle]='"Fall Guys"'
-    [reviewScore]='"7.5/10"'
-    [reviewDate]='"12/08/2016"'>
-  </app-review-banner>
-  <br>
+  <div *ngFor="let reviewInfo of reviewInfoArray;">
+    <app-review-banner
+      [imageURL]= "reviewInfo.imageURL"
+      [gameTitle]= "reviewInfo.title"
+      [reviewScore]= "reviewInfo.score"
+      [reviewDate]= "reviewInfo.date"
+      route= "{{reviewInfo.navRoute}}">
+    </app-review-banner>
+    <br>
+  </div>
 </div>
