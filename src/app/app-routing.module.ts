@@ -38,7 +38,7 @@ const routes: Routes = [
     component: GameReviewsComponent
   },
   {
-    path: AppRoutes.LittleNightmares2,
+    path: `${AppRoutes.GameReviews}/${AppRoutes.LittleNightmares2}`,
     component: LittleNightmaresTwoComponent
   },
   {

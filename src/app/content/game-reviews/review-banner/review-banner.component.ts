@@ -1,3 +1,4 @@
+import { AppRoutes } from './../../../routes';
 import { Router } from '@angular/router';
 import { MediaService } from './../../../services/media-service';
 import { Component, Input, OnInit } from '@angular/core';
@@ -29,7 +30,7 @@ export class ReviewBannerComponent implements OnInit {
 
   public navigate() {
     if(this.route) {
-      this.router.navigate([`./${this.route}`]);
+      this.router.navigate([`${AppRoutes.GameReviews}/${this.route}`]);
     }
   }
 
