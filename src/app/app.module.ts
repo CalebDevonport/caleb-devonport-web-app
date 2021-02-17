@@ -11,14 +11,12 @@ import { ToolbarComponent } from './toolbar';
 import { SecondComponent } from './content/second';
 import { ThirdComponent } from './content/third';
 import { FourthComponent } from './content/fourth';
-import { GameReviewsComponent } from './content/game-reviews';
+import { GameReviewsComponent, GameReviewsRoutingComponent, ReviewBannerComponent, LittleNightmaresTwoComponent } from './content/game-reviews';
 import { FooterComponent } from './sidenav/footer';
 import { HeaderComponent } from './sidenav/header';
 import { NavComponent } from './sidenav/nav';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
-import { ReviewBannerComponent } from './content/game-reviews/review-banner/review-banner.component';
 import { SixthComponent } from './content/sixth/sixth.component';
-import { LittleNightmaresTwoComponent } from './content/game-reviews/reviews/little-nightmares-two/little-nightmares-two.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +34,8 @@ import { LittleNightmaresTwoComponent } from './content/game-reviews/reviews/lit
     ImageViewerComponent,
     ReviewBannerComponent,
     SixthComponent,
-    LittleNightmaresTwoComponent
+    LittleNightmaresTwoComponent,
+    GameReviewsRoutingComponent
   ],
   imports: [
     BrowserModule,

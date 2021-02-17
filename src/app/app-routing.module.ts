@@ -1,12 +1,13 @@
 import { AppRoutes } from './routes';
 import {
+  HomeComponent,
+  SecondComponent,
+  ThirdComponent,
+  FourthComponent,
+  GameReviewsComponent,
+  GameReviewsRoutingComponent,
   LittleNightmaresTwoComponent,
   SixthComponent,
-  GameReviewsComponent,
-  FourthComponent,
-  ThirdComponent,
-  SecondComponent,
-  HomeComponent
  } from './content';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -35,11 +36,17 @@ const routes: Routes = [
   },
   {
     path: AppRoutes.GameReviews,
-    component: GameReviewsComponent
-  },
-  {
-    path: `${AppRoutes.GameReviews}/${AppRoutes.LittleNightmares2}`,
-    component: LittleNightmaresTwoComponent
+    component: GameReviewsRoutingComponent,
+    children: [
+      {
+        path: '',
+        component: GameReviewsComponent
+      },
+      {
+        path: AppRoutes.LittleNightmares2,
+        component: LittleNightmaresTwoComponent
+      }
+    ]
   },
   {
     path: AppRoutes.Sixth,
