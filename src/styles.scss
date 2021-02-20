@@ -1,3 +1,36 @@
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+$min_width: 320px;
+$max_width: 982px;
+$min_font: 15px;
+$max_font: 19px;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  line-height: 1.5;
+}
+
 img {
   display: block;
   margin: 0 auto;
@@ -5,19 +38,15 @@ img {
 }
 
 mat-sidenav {
-  width: 250px;
+  width: 260px;
   background: #383838;
   border-right: solid 1px rgba(255, 255, 255, 0.05);
   box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.15);
 }
 
 h1, h2, h3, h4, p, span {
-  font-family: 'Merriweather';
+  font-family: 'Merriweather', serif;
   color: white;
-}
-
-h3 {
-  font-weight: 300;
 }
 
 hr {
