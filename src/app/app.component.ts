@@ -1,7 +1,7 @@
 import { MediaService } from './services';
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -21,9 +21,12 @@ export class AppComponent implements OnInit {
   private mediaService = new MediaService('(max-width: 768px)');
 
   constructor(private router: Router) {
-    router.events.subscribe(_ => {
+    router.events.subscribe(evt => {
       if (this.mode == 'over') {
         this.sidenav.close();
+      }
+      if (evt instanceof NavigationEnd) {
+        document.querySelector('.mat-sidenav-content').scrollTo(0, 0);
       }
     });
   }
