@@ -1,37 +1,43 @@
-import { AppRoutes } from './../../../routes';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MediaService } from './../../../services/media-service';
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewChecked, ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
+import { MediaService } from 'src/app/services';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-review-banner',
   templateUrl: './review-banner.component.html',
   styleUrls: ['./review-banner.component.scss']
 })
-export class ReviewBannerComponent implements OnInit {
+export class ReviewBannerComponent implements OnInit, AfterViewChecked {
 
-  @Input() imageURL: string;
-  @Input() gameTitle: string;
-  @Input() reviewScore: string;
-  @Input() reviewDate: string;
-  @Input() route: string;
-
-  public isMobile: boolean;
-
+  private isMobile: boolean;
   private mediaService = new MediaService('(max-width: 768px)');
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  public heightValue: string;
+  public headerAdjust: string;
+
+  @Input() imageURL: string;
+
+  @ViewChild('bannerImage') bannerImage: ElementRef;
+  @ViewChild('spacer') spacer: ElementRef;
+
+  constructor() {
+  }
 
   ngOnInit() {
-    this.mediaService.match$.subscribe(value => {
-      this.isMobile = value;
+    this.mediaService.match$.subscribe(isMobile => {
+      this.isMobile = isMobile;
     });
   }
 
-  public navigate() {
-    if(this.route) {
-      this.router.navigate([this.route], {relativeTo: this.activatedRoute});
-    }
+  ngAfterViewChecked() {
+    this.adjustHeight();
   }
 
+  @HostListener('window:resize')
+  adjustHeight() {
+    var imageHeight = this.bannerImage.nativeElement.height;
+    this.heightValue = `${imageHeight}px`;
+    this.spacer.nativeElement.style.height = this.heightValue;
+    this.headerAdjust = `${this.isMobile ? 64 : 0}px`;
+  }
 }

@@ -2,13 +2,13 @@
   <h1>Game Reviews</h1>
   <hr>
   <div *ngFor="let reviewInfo of reviewInfoArray;">
-    <app-review-banner
+    <app-review-selector
       [imageURL]= "reviewInfo.imageURL"
       [gameTitle]= "reviewInfo.title"
       [reviewScore]= "reviewInfo.score"
       [reviewDate]= "reviewInfo.date"
       route= "{{reviewInfo.navRoute}}">
-    </app-review-banner>
+    </app-review-selector>
     <br>
   </div>
 </div>

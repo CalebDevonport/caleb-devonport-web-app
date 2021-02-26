@@ -1,9 +1,3 @@
-<div class="outer" (click)="navigate()">
-  <div class="image" [ngStyle]="{ 'background-image': 'url(' + imageURL + ')'}"></div>
-  <div class="text">
-    <h2>{{gameTitle}}</h2>
-    <h3 *ngIf="!isMobile">Review score: {{reviewScore}}</h3>
-    <h3 *ngIf="!isMobile">Reviewed on: {{reviewDate}}</h3>
-  </div>
-</div>
+<img #bannerImage (load)="adjustHeight()" [src]='imageURL' [ngStyle]='{"top":headerAdjust}'>
 
+<div #spacer [ngStyle]='{"height":heightValue}'></div>
