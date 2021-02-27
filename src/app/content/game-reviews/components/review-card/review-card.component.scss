@@ -1,0 +1,62 @@
+mat-card {
+  background-color: #383838;
+  padding: 5px 0px;
+}
+
+.horiz-divide {
+  width: 90%;
+}
+
+.vert-divide {
+  width: 0.1%
+}
+
+.card-title {
+  text-align: center;
+  justify-content: center;
+}
+
+.pros-cons {
+  display: flex;
+  flex-direction: row;
+
+  h2 {
+    text-align: center;
+  }
+
+  .column {
+    flex: 5;
+  }
+
+  .column-spacer {
+    flex: 1;
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  li {
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+  
+  li > p:before {
+    padding-right: 9px;
+  }
+
+  .pros {
+    li > p:before {
+      content: "+";
+    }
+  }
+
+  .cons {
+    li > p:before {
+      content: "-";
+    }
+  }
+}
+  

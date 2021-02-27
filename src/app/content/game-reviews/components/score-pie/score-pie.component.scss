@@ -1,0 +1,129 @@
+// -- vars
+$bg-color: #121212;
+$default-size: 1em;
+$label-font-size: $default-size / 4;
+$label-font-size-redo: $default-size * 4;
+$rating-color-good: #27ae60;
+$rating-color-average: #f1c40f;
+$rating-color-bad: #e74c3c;
+
+
+// -- mixins
+@mixin size($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+@mixin draw-progress($progress, $color) {
+  .pie {
+    .half-circle {
+      border-color: $color;
+    }
+
+    .left-side {
+      transform: rotate($progress * 3.6deg);
+    }
+
+    @if $progress <= 50 {
+      .right-side {
+        display: none;
+      }
+    } @else {
+      clip: rect(auto, auto, auto, auto);
+
+      .right-side {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+// -- selectors
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.set-size {
+  font-size: 10em;
+}
+
+.pie-wrapper {
+  @include size($default-size, $default-size);
+  margin: 15px;
+  position: relative;
+
+  .label {
+    background: $bg-color;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: $label-font-size;
+    line-height: $label-font-size-redo * .80;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: $label-font-size-redo / 10;
+    left: $label-font-size-redo / 10;
+    right: $label-font-size-redo / 10;
+    bottom: $label-font-size-redo / 10;
+  }
+
+  .pie {
+    @include size(100%, 100%);
+    clip: rect(0, $default-size, $default-size, $default-size / 2);
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .half-circle {
+      @include size(100%, 100%);
+      border: ($default-size / 10) solid #3498db;
+      border-radius: 50%;
+      clip: rect(0, $default-size / 2, $default-size, 0);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  
+  &.progress-100 {
+    @include draw-progress(100, $rating-color-good);
+  }
+
+  &.progress-90 {
+    @include draw-progress(90, $rating-color-good);
+  }
+
+  &.progress-80 {
+    @include draw-progress(80, $rating-color-good);
+  }
+
+  &.progress-70 {
+    @include draw-progress(70, $rating-color-good);
+  }
+
+  &.progress-60 {
+    @include draw-progress(60, $rating-color-average);
+  }
+
+  &.progress-50 {
+    @include draw-progress(50, $rating-color-average);
+  }
+
+  &.progress-40 {
+    @include draw-progress(40, $rating-color-bad);
+  }
+
+  &.progress-30 {
+    @include draw-progress(30, $rating-color-bad);
+  }
+
+  &.progress-20 {
+    @include draw-progress(20, $rating-color-bad);
+  }
+
+  &.progress-10 {
+    @include draw-progress(10, $rating-color-bad);
+  }
+}

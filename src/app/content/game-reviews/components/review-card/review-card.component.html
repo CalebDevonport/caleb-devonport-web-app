@@ -1,0 +1,41 @@
+<mat-card>
+
+  <mat-card-header class="card-title">
+    <mat-card-title>
+      <app-score-pie [score]="score"></app-score-pie>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <hr class="horiz-divide">
+
+    <div class="pros-cons">
+
+      <div class="column-spacer"></div>
+      <div class="column pros">
+        <h2>Pros</h2>
+        <ul>
+          <li *ngFor="let pro of pros">
+            <p>{{pro}}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="column-spacer"></div>
+
+      <hr class="vert-divide">
+
+      <div class="column-spacer"></div>
+      <div class="column cons">
+        <h2>Cons</h2>
+        <ul>
+          <li *ngFor="let con of cons">
+            <p>{{con}}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="column-spacer"></div>
+
+    </div>
+  </mat-card-content>
+</mat-card>

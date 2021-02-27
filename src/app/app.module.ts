@@ -11,7 +11,15 @@ import { ToolbarComponent } from './toolbar';
 import { SecondComponent } from './content/second';
 import { ThirdComponent } from './content/third';
 import { FourthComponent } from './content/fourth';
-import { GameReviewsComponent, GameReviewsRoutingComponent, ReviewSelectorComponent, ReviewBannerComponent, LittleNightmaresTwoComponent } from './content/game-reviews';
+import { 
+  GameReviewsComponent,
+  GameReviewsRoutingComponent,
+  ReviewSelectorComponent,
+  ReviewCardComponent,
+  ReviewBannerComponent,
+  ScorePieComponent,
+  LittleNightmaresTwoComponent
+} from './content/game-reviews';
 import { FooterComponent } from './sidenav/footer';
 import { HeaderComponent } from './sidenav/header';
 import { NavComponent } from './sidenav/nav';
@@ -36,7 +44,9 @@ import { SixthComponent } from './content/sixth/sixth.component';
     SixthComponent,
     LittleNightmaresTwoComponent,
     GameReviewsRoutingComponent,
-    ReviewBannerComponent
+    ReviewBannerComponent,
+    ReviewCardComponent,
+    ScorePieComponent
   ],
   imports: [
     BrowserModule,
