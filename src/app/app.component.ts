@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
 
   public toggleMenu():void {
     this.sidenav.toggle();
+    document.querySelector('.mat-drawer-inner-container').scrollTo(0, 0);
   }
 
   private setView(value: boolean) {
