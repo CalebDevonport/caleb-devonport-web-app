@@ -5,7 +5,7 @@ import { HomeComponent } from './home';
 import { SecondComponent } from './second';
 import { ThirdComponent } from './third';
 import { FourthComponent } from './fourth';
-import { GameReviewsComponent, ReviewBannerComponent, LittleNightmaresTwoComponent } from './game-reviews';
+import { GameReviewsComponent, ReviewBannerComponent, ReviewSelectorComponent, LittleNightmaresTwoComponent } from './game-reviews';
 import { SixthComponent } from './sixth/sixth.component';
 
 @NgModule({
@@ -16,6 +16,7 @@ import { SixthComponent } from './sixth/sixth.component';
     FourthComponent,
     GameReviewsComponent,
     ReviewBannerComponent,
+    ReviewSelectorComponent,
     SixthComponent,
     LittleNightmaresTwoComponent
   ],
