@@ -1,6 +1,21 @@
 <div class="text-center">
-  <h1>Game Reviews</h1>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h1>Game Reviews</h1>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>Welcome to my game reviews!</p>
+    <p>I've played games my entire life, and so I've created this space to allow me to share my opinions with the world.</p>
+    <p>While I try to stay as objective as I can, the majority of these reviews will be positive - 
+      that's simply because I'm unlikely to commit a lot of time and effort to analyse a game enough for a review if I don't really like it.</p>
+    <p>I hope you enjoy reading some of my thoughts on a variety of different games. 
+      If you have any comments or want to discuss, then feel free to contact me through any of the options on the contact page.</p>
+  </mat-expansion-panel>
+
   <hr>
+  
   <div *ngFor="let reviewInfo of reviewInfoArray;">
     <app-review-selector
       [imageURL]= "reviewInfo.imageURL"
