@@ -19,14 +19,14 @@ export class GameReviewsComponent implements OnInit {
       navRoute: AppRoutes.LittleNightmares2,
       title: 'Little Nightmares 2',
       score: '8.0',
-      date: '15/02/2021',
+      date: '27/02/2021',
       imageURL: 'assets/images/little-nightmares-2-banner.png'
     },
     {
       navRoute: '',
       title: 'Doom 2016',
       score: '8.0',
-      date: '27/02/2021',
+      date: '15/02/2021',
       imageURL: 'assets/images/doom-panorama.jpg'
     },
     {
