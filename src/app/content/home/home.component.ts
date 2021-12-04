@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppRoutes } from 'src/app/routes';
 import { MediaService } from 'src/app/services';
-import { BorderSizeService } from 'src/app/services/border-size.service';
+import { ContentWidthService } from 'src/app/services/content-width.service';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +14,7 @@ export class HomeComponent implements OnInit {
   public isMobile: boolean;
   private mediaService = new MediaService('(max-width: 768px)');
 
-  constructor(private borderSizeService: BorderSizeService) {
-  }  
+  constructor(private borderSizeService: ContentWidthService) {}
 
   ngOnInit() {
     this.mediaService.match$.subscribe(isMobile => {

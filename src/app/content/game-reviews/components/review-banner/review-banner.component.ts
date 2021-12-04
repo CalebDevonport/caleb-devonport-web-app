@@ -35,7 +35,7 @@ export class ReviewBannerComponent implements OnInit, AfterViewChecked {
 
   @HostListener('window:resize')
   adjustHeight() {
-    var imageHeight = this.bannerImage.nativeElement.height;
+    const imageHeight = this.bannerImage.nativeElement.height;
     this.heightValue = `${imageHeight}px`;
     this.spacer.nativeElement.style.height = this.heightValue;
     this.headerAdjust = `${this.isMobile ? 64 : 0}px`;

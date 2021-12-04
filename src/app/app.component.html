@@ -7,8 +7,7 @@
       <app-toolbar *ngIf="!isHome && isMobile" (toggleMenuEvent)="toggleMenu()"></app-toolbar>
       <div [ngClass]="{'mobile-padding': !isHome}" class="main-container">
         <div class="border"></div>
-        <div class="content-container" #content [ngStyle]="{'max-width': size}">
-          <!-- <div class="content-container" #content [ngStyle]="{'max-width': 'min(size, 90%)'}"></div> -->
+        <div class="content-container" #content [ngStyle]="{'max-width': contentWidth}">
           <router-outlet></router-outlet>
         </div>
         <div class="border"></div>

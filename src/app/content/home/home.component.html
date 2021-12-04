@@ -9,14 +9,11 @@
       </div>
     </div>
     <div class="portrait" #portrait style="max-width: 80%; margin-bottom: 15px;">
-      <app-image-viewer [circleMode]="true" [imageURL]='"assets/images/Portrait.jpg"'></app-image-viewer>
+      <app-image-viewer [isCircular]="true" [imageURL]='"assets/images/Portrait.jpg"'></app-image-viewer>
     </div>
     <div class="icon-container">
       <app-home-nav *ngIf="isMobile"></app-home-nav>
     </div>
-    <!-- <div class="icon-container" *ngIf="isMobile" #icon style="width: 100%;">
-      <a href="https://github.com/CalebDevonport"><span class="iconify" data-icon="mdi:menu" data-inline="true"></span></a>
-    </div> -->
   </div>
   <ul class="links" *ngIf="!isMobile">
     <li class="list-item">

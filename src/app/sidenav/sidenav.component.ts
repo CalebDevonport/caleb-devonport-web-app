@@ -11,6 +11,8 @@ export class SidenavComponent implements OnInit {
   public isMobile: boolean;
   private mediaService = new MediaService('(max-width: 768px)');
 
+  @Output() toggleMenuEvent = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
@@ -18,9 +20,8 @@ export class SidenavComponent implements OnInit {
       this.isMobile = isMobile;
     });
   }
-  @Output() toggleMenuEvent = new EventEmitter();
 
   toggleMenu(): void {
     this.toggleMenuEvent.emit();
-  }  
+  }
 }

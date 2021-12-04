@@ -4,13 +4,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 999;
   background-color: #121212;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .icon-container {
@@ -22,7 +17,6 @@
   position: fixed;
   left: 16px;
   top: 4px;
-  z-index: 999;
 }
 
 .spacer {
@@ -36,20 +30,11 @@
   flex-wrap: wrap;
 }
 
-.viewer-content {
-  width: 100%;
-  height: 100%;
-}
-
 .links {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.list-item {
-  flex:auto;
 }
 
 ul {

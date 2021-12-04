@@ -3,4 +3,4 @@
     <img class="main-img" [src]="imageURL"/>
   </div>
 </div>
-<div class="base-img" (click)="toggleFullscreen()"><img [ngClass]="{'circle-mode': circleMode === true}" src={{imageURL}}></div>
+<div class="base-img" (click)="toggleFullscreen()"><img [ngClass]="{'circular': isCircular === true}" src={{imageURL}}></div>

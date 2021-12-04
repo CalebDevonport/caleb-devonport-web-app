@@ -10,12 +10,12 @@ export class HomeNavComponent implements OnInit {
 
   public AppRoutes = AppRoutes;
 
+  public open: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  public open: boolean;
 
   toggleMenu() {
     this.open = !this.open;

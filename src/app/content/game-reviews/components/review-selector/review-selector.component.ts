@@ -28,7 +28,7 @@ export class ReviewSelectorComponent implements OnInit {
   }
 
   public navigate() {
-    if(this.route) {
+    if (this.route) {
       this.router.navigate([this.route], {relativeTo: this.activatedRoute});
     }
   }

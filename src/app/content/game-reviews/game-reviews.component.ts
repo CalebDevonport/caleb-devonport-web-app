@@ -9,11 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameReviewsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   public reviewInfoArray: ReviewInfo[] = [
     {
       navRoute: AppRoutes.LittleNightmares2,
@@ -57,6 +52,11 @@ export class GameReviewsComponent implements OnInit {
       date: '15/02/2021',
       imageURL: 'assets/images/fall-guys-banner.png'
     }
-  ]
+  ];
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }

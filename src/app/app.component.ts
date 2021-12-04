@@ -1,10 +1,9 @@
 import { MediaService } from './services';
 import { Component, ViewChild, OnInit, ChangeDetectorRef } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { AppRoutes } from './routes';
-import { BorderSizeService } from './services/border-size.service';
-import { FixedTileStyler } from '@angular/material/grid-list/tile-styler';
+import { ContentWidthService } from './services/content-width.service';
 
 @Component({
   selector: 'app-root',
@@ -21,14 +20,14 @@ export class AppComponent implements OnInit {
 
   public isMobile: boolean;
 
-  public isHome: boolean = true;
+  public isHome = true;
 
   private mediaService = new MediaService('(max-width: 768px)');
-  public size: string = '600px';
+  public contentWidth = '600px';
 
-  constructor(private router: Router, private borderSizeService: BorderSizeService, private changeDetector: ChangeDetectorRef) {
+  constructor(private router: Router, private borderSizeService: ContentWidthService, private changeDetector: ChangeDetectorRef) {
     router.events.subscribe(evt => {
-      if (this.mode == 'over' && !!this.sidenav) {
+      if (this.mode === 'over' && !!this.sidenav) {
         this.sidenav.close();
       }
       if (evt instanceof NavigationEnd) {
@@ -51,13 +50,13 @@ export class AppComponent implements OnInit {
       this.setView(value);
     });
 
-    this.borderSizeService.size$.subscribe(size => {
-      this.size = `${Math.min(window.innerWidth * 0.9, size)}px`;
+    this.borderSizeService.width$.subscribe(size => {
+      this.contentWidth = `${Math.min(window.innerWidth * 0.9, size)}px`;
       this.changeDetector.detectChanges();
     });
   }
 
-  public toggleMenu():void {
+  public toggleMenu(): void {
     this.sidenav.toggle();
     document.querySelector('.mat-drawer-inner-container').scrollTo(0, 0);
   }

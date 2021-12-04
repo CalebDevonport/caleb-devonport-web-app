@@ -9,7 +9,8 @@ import { GameReviewsComponent, ReviewBannerComponent, ReviewSelectorComponent, L
 import { SixthComponent } from './sixth/sixth.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule } from '@angular/router';
-import { BorderSizeService } from '../services/border-size.service';
+import { ContentWidthService } from '../services/content-width.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BorderSizeService } from '../services/border-size.service';
     AppModule,
     AppRoutingModule,
     RouterModule,
-    BorderSizeService
+    ContentWidthService,
+    CommonModule
   ],
   providers: [],
   bootstrap: []

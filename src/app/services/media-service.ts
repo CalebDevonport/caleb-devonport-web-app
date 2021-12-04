@@ -1,4 +1,4 @@
-import { ReplaySubject } from "rxjs";
+import { ReplaySubject } from 'rxjs';
 
 export class MediaService {
   private matches = new ReplaySubject<boolean>(1);

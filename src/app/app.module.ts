@@ -11,7 +11,7 @@ import { ToolbarComponent } from './toolbar';
 import { SecondComponent } from './content/second';
 import { ThirdComponent } from './content/third';
 import { FourthComponent } from './content/fourth';
-import { 
+import {
   GameReviewsComponent,
   GameReviewsRoutingComponent,
   ReviewSelectorComponent,
@@ -26,7 +26,8 @@ import { NavComponent } from './sidenav/nav';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { SixthComponent } from './content/sixth/sixth.component';
 import { HomeNavComponent } from './content/home/home-nav/home-nav.component';
-import { BorderSizeService } from './services/border-size.service';
+import { ContentWidthService } from './services/content-width.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -56,9 +57,9 @@ import { BorderSizeService } from './services/border-size.service';
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    
+    CommonModule
   ],
-  providers: [BorderSizeService],
+  providers: [ContentWidthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
