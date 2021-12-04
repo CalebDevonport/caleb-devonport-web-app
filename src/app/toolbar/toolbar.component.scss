@@ -8,7 +8,7 @@
   box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.15);
 }
 
-.example-spacer {
+.spacer {
   flex: 1;
 }
 
@@ -19,4 +19,9 @@
 
 .icon {
   color: black;
+}
+
+.icon-container {
+  font-size: 40px;
+  color: white;
 }

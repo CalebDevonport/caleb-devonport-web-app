@@ -1,11 +1,28 @@
-.outer-aligner {
+.nav-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #121212;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
-  height: 100vh;
   text-align: center;
+}
+
+.icon-container {
+  font-size: 40px;
+  color: white;
+}
+
+.exit {
+  position: fixed;
+  left: 16px;
+  top: 4px;
+  z-index: 999;
 }
 
 .spacer {
@@ -19,27 +36,16 @@
   flex-wrap: wrap;
 }
 
-.bio,
-.portrait {
-  flex: auto;
-}
-
-@media (min-width: 768px) {
-  .bio,
-  .portrait {
-    width: 50%;
-  }
-}
-
-.icon-container {
+.viewer-content {
   width: 100%;
+  height: 100%;
 }
 
 .links {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
 }
 
 .list-item {
@@ -48,6 +54,7 @@
 
 ul {
   list-style: none;
+  padding-inline-start: 0 !important;
 }
 
 a {
@@ -56,12 +63,6 @@ a {
 
 a:hover > h4 {
   color: darkgrey;
-}
-
-@media (min-width: 768px) {
-  h1, h2, h4 {
-    margin-bottom: 0 !important;
-  }
 }
 
 .is-active {

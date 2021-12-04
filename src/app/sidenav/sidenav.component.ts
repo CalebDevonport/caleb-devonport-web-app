@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MediaService } from '../services';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
+  public isMobile: boolean;
+  private mediaService = new MediaService('(max-width: 768px)');
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.mediaService.match$.subscribe(isMobile => {
+      this.isMobile = isMobile;
+    });
   }
+  @Output() toggleMenuEvent = new EventEmitter();
 
+  toggleMenu(): void {
+    this.toggleMenuEvent.emit();
+  }  
 }

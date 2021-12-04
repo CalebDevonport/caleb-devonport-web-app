@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class ImageViewerComponent {
 
   @Input() imageURL: string;
+  @Input() circleMode: boolean = false;
 
   public open: boolean;
 

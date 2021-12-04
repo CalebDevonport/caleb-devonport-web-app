@@ -1,7 +1,10 @@
 import { MediaService } from './services';
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, ChangeDetectorRef } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { AppRoutes } from './routes';
+import { BorderSizeService } from './services/border-size.service';
+import { FixedTileStyler } from '@angular/material/grid-list/tile-styler';
 
 @Component({
   selector: 'app-root',
@@ -18,15 +21,27 @@ export class AppComponent implements OnInit {
 
   public isMobile: boolean;
 
-  private mediaService = new MediaService('(max-width: 768px)');
+  public isHome: boolean = true;
 
-  constructor(private router: Router) {
+  private mediaService = new MediaService('(max-width: 768px)');
+  public size: string = '600px';
+
+  constructor(private router: Router, private borderSizeService: BorderSizeService, private changeDetector: ChangeDetectorRef) {
     router.events.subscribe(evt => {
-      if (this.mode == 'over') {
+      if (this.mode == 'over' && !!this.sidenav) {
         this.sidenav.close();
       }
       if (evt instanceof NavigationEnd) {
-        document.querySelector('.mat-sidenav-content').scrollTo(0, 0);
+        this.borderSizeService.changeSize(600);
+        if (router.url.includes(AppRoutes.Home)) {
+          this.isHome = true;
+        }
+        else {
+          this.isHome = false;
+        }
+        if (!this.isHome) {
+          document.querySelector('.mat-sidenav-content').scrollTo(0, 0);
+        }
       }
     });
   }
@@ -34,6 +49,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.mediaService.match$.subscribe(value => {
       this.setView(value);
+    });
+
+    this.borderSizeService.size$.subscribe(size => {
+      this.size = `${Math.min(window.innerWidth * 0.9, size)}px`;
+      this.changeDetector.detectChanges();
     });
   }
 

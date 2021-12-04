@@ -1,0 +1,45 @@
+<div *ngIf="open" class="nav-container">
+  <div class="icon-container exit" (click)="toggleMenu()">
+    <span class="iconify" data-icon="ic:baseline-close" data-inline="true"></span>
+  </div>
+  <div class="spacer"></div>
+  <div class="aligner">
+    <ul class="links">
+      <li class="list-item">
+        <a [routerLink]="['/', AppRoutes.Home]">
+          <h4 class="is-active">Home</h4>
+        </a>
+      </li>
+      <li class="list-item">
+        <a [routerLink]="['/', AppRoutes.Second]">
+          <h4>CV</h4>
+        </a>
+      </li>
+      <li class="list-item">
+        <a [routerLink]="['/', AppRoutes.Third]">
+          <h4>Portfolio</h4>
+        </a>
+      </li>
+      <li class="list-item">
+        <a [routerLink]="['/', AppRoutes.Fourth]">
+          <h4>Blog</h4>
+        </a>
+      </li>
+      <li class="list-item">
+        <a [routerLink]="['/', AppRoutes.GameReviews]">
+          <h4>Game Reviews</h4>
+        </a>
+      </li>
+      <li class="list-item">
+        <a [routerLink]="['/', AppRoutes.Sixth]">
+          <h4>Contact</h4>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="spacer"></div>
+</div>
+<div *ngIf="!open" class="icon-container" (click)="toggleMenu()">
+    <span class="iconify" data-icon="mdi:menu" data-inline="true"></span>
+</div>
+  

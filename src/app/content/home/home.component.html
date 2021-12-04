@@ -1,48 +1,54 @@
-<div class="text-center">
-
-  <h1>Caleb Devonport</h1>
-  <hr>
-
-  <div style="display: flex; flex-wrap:wrap; padding:25px 0px; align-items: center; height: 45%;">
-    <div style="flex: 1;">
-      <h1>Software Engineer</h1>
-      <h1 style="font-weight: 900;">RANDOM</h1>
-      <h1 style="font-weight: 900;">Random</h1>
-      <h1>RANDOM</h1>
-      <h1>Random</h1>
-      <h1 style="font-weight: 300;">RANDOM</h1>
-      <h1 style="font-weight: 300;">Random</h1>
-
+<div class="outer-aligner" #outerAligner>
+  <div class="spacer"></div>
+  <div class="aligner" #aligner>
+    <div class="bio">
+      <div>
+        <h1>Hi. I'm Caleb.</h1>
+        <h4>I'm a full stack software engineer, working primarily with .Net Core and Angular applications.</h4>
+        <h4>I like gaming, reading and coding, and I'm a little obsessed with coffee. I have 3 pet rats. I live in London.</h4>
+      </div>
     </div>
-    <div style="flex: 1; min-width: 250px;">
-      <app-image-viewer [imageURL]='"assets/images/crab-pic.jpg"'></app-image-viewer>
+    <div class="portrait" #portrait style="max-width: 80%; margin-bottom: 15px;">
+      <app-image-viewer [circleMode]="true" [imageURL]='"assets/images/Portrait.jpg"'></app-image-viewer>
     </div>
-  </div>
-  <div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>How does a normal sentence look here? Just gonna type some random words other than lorem ipsum as I'm interested. How about if I write enough for it to split over two lines?</p>
-  </div>
-
-  <div style="display: flex; flex-wrap:wrap; padding-bottom:25px; align-items: center;">
-    <div style="flex: 1; min-width: 250px;">
-      <app-image-viewer [imageURL]='"assets/images/crab-pic.jpg"'></app-image-viewer>
+    <div class="icon-container">
+      <app-home-nav *ngIf="isMobile"></app-home-nav>
     </div>
-    <div style="flex: 1;">
-      <h1>Software Engineer</h1>
-      <h1>Random</h1>
-      <h1>Random</h1>
-      <h1>Random</h1>
-      <h1>Random</h1>
-    </div>
+    <!-- <div class="icon-container" *ngIf="isMobile" #icon style="width: 100%;">
+      <a href="https://github.com/CalebDevonport"><span class="iconify" data-icon="mdi:menu" data-inline="true"></span></a>
+    </div> -->
   </div>
-
-  <div style="padding-bottom:25px;">
-    <app-image-viewer [imageURL]='"assets/images/doom-panorama.jpg"'></app-image-viewer>
-  </div>
-  <div style="padding-bottom:25px;">
-    <app-image-viewer [imageURL]='"assets/images/doom-panorama.jpg"'></app-image-viewer>
-  </div>
-  <div style="padding-bottom:25px;">
-    <h1>Testing the bottom</h1>
-  </div>
+  <ul class="links" *ngIf="!isMobile">
+    <li class="list-item">
+      <a [routerLink]="['/', AppRoutes.Home]">
+        <h4 class="is-active">Home</h4>
+      </a>
+    </li>
+    <li class="list-item">
+      <a [routerLink]="['/', AppRoutes.Second]">
+        <h4>CV</h4>
+      </a>
+    </li>
+    <li class="list-item">
+      <a [routerLink]="['/', AppRoutes.Third]">
+        <h4>Portfolio</h4>
+      </a>
+    </li>
+    <li class="list-item">
+      <a [routerLink]="['/', AppRoutes.Fourth]">
+        <h4>Blog</h4>
+      </a>
+    </li>
+    <li class="list-item">
+      <a [routerLink]="['/', AppRoutes.GameReviews]">
+        <h4>Game Reviews</h4>
+      </a>
+    </li>
+    <li class="list-item">
+      <a [routerLink]="['/', AppRoutes.Sixth]">
+        <h4>Contact</h4>
+      </a>
+    </li>
+  </ul>
+  <div class="spacer"></div>
 </div>

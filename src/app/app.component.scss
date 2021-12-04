@@ -6,8 +6,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  // background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  // background: linear-gradient(90deg, rgba(32,30,36,1) 0%, rgba(45,45,74,1) 35%, rgba(73,105,111,1) 100%);
   background-color: #121212;
 }
 
@@ -20,7 +18,7 @@ mat-sidenav-container {
 }
 
 @media (max-width: 768px) {
-  .main-container {
+  .mobile-padding {
     padding-top: 64px;
   }
 }
@@ -29,12 +27,6 @@ mat-sidenav-container {
   flex:1;
 }
 
-.toolbar-container {
-  flex:999 1 auto;
-  max-width: 650px;
-}
-
 .content-container {
   flex:999;
-  max-width: min(650px, 90%);
 }

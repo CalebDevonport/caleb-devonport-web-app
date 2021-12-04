@@ -1,6 +1,12 @@
+<div *ngIf="isMobile" class="exit-position">
+  <div class="icon-container exit" (click)="toggleMenu()">
+    <span class="iconify" data-icon="ic:baseline-close" data-inline="true"></span>
+  </div>
+</div>
+
 <div class="sidenav-container">
   <div class="header">
-    <app-header></app-header>
+    <app-header (toggleMenuEvent)="toggleMenu()"></app-header>
   </div>
   <div class="divider">
     <hr>

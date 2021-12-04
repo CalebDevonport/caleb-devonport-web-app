@@ -1,3 +1,20 @@
+.exit-position {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.icon-container {
+  font-size: 40px;
+  color: white;
+}
+
+.exit {
+  position: absolute;
+  left: 16px;
+  top: 4px;
+}
+
 .header, footer {
   flex:1;
 }

@@ -1,7 +1,10 @@
 <mat-toolbar class="app-toolbar">
-  <button (click)="toggleMenu()" mat-icon-button>
-    <mat-icon class="icon">menu</mat-icon>
-  </button>
-  <span class="example-spacer"></span>
+  <!-- <button (click)="toggleMenu()" mat-icon-button>
+    <span class="iconify" data-icon="mdi:menu" data-inline="true"></span>
+  </button> -->
+  <div class="icon-container" (click)="toggleMenu()">
+    <span class="iconify" data-icon="mdi:menu" data-inline="true"></span>
+  </div>
+  <span class="spacer"></span>
   <span class="name">Caleb <br> Devonport</span>
 </mat-toolbar>

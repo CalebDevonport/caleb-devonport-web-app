@@ -25,6 +25,8 @@ import { HeaderComponent } from './sidenav/header';
 import { NavComponent } from './sidenav/nav';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { SixthComponent } from './content/sixth/sixth.component';
+import { HomeNavComponent } from './content/home/home-nav/home-nav.component';
+import { BorderSizeService } from './services/border-size.service';
 
 @NgModule({
   declarations: [
@@ -46,15 +48,17 @@ import { SixthComponent } from './content/sixth/sixth.component';
     GameReviewsRoutingComponent,
     ReviewBannerComponent,
     ReviewCardComponent,
-    ScorePieComponent
+    ScorePieComponent,
+    HomeNavComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
-  providers: [],
+  providers: [BorderSizeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
