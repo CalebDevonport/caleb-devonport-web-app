@@ -36,3 +36,7 @@
 .divider {
   flex: 1 100 auto;
 }
+
+.enable-vert-scroll {
+  touch-action: pan-y !important;
+}
