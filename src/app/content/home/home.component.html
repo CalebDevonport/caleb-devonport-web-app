@@ -1,4 +1,4 @@
-<div class="outer-aligner" #outerAligner>
+<div class="outer-aligner" #outerAligner (swipeup)="onSwipeUp()">
   <div class="spacer"></div>
   <div class="aligner" #aligner>
     <div class="bio">
@@ -12,7 +12,7 @@
       <app-image-viewer [isCircular]="true" [imageURL]='"assets/images/Portrait.jpg"'></app-image-viewer>
     </div>
     <div class="icon-container">
-      <app-home-nav *ngIf="isMobile"></app-home-nav>
+      <app-home-nav *ngIf="isMobile" [openMenuSubject]="openMenuSubject.asObservable()"></app-home-nav>
     </div>
   </div>
   <ul class="links" *ngIf="!isMobile">

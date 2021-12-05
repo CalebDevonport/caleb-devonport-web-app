@@ -1,5 +1,5 @@
-<div *ngIf="open" class="nav-container">
-  <div class="icon-container exit" (click)="toggleMenu()">
+<div *ngIf="open" [@navAnimation] class="nav-container" (swipedown)="onSwipeDown()">
+  <div class="icon-container exit" (click)="closeMenu()" (tap)="closeMenu()">
     <span class="iconify" data-icon="ic:baseline-close" data-inline="true"></span>
   </div>
   <div class="spacer"></div>
@@ -39,7 +39,7 @@
   </div>
   <div class="spacer"></div>
 </div>
-<div *ngIf="!open" class="icon-container" (click)="toggleMenu()">
-    <span class="iconify" data-icon="mdi:menu" data-inline="true"></span>
+<div class="icon-container" (click)="openMenu()">
+    <span class="iconify" data-icon="ic:baseline-expand-less" data-inline="true"></span>
 </div>
   

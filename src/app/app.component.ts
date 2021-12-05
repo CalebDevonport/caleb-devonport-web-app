@@ -56,6 +56,12 @@ export class AppComponent implements OnInit {
     });
   }
 
+  public onSwipeRight() {
+    if (!this.isHome && this.isMobile) {
+      this.toggleMenu();
+    }
+  }
+
   public toggleMenu(): void {
     this.sidenav.toggle();
     document.querySelector('.mat-drawer-inner-container').scrollTo(0, 0);

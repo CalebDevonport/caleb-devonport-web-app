@@ -30,3 +30,7 @@ mat-sidenav-container {
 .content-container {
   flex:999;
 }
+
+.enable-vert-scroll {
+  touch-action: pan-y !important;
+}
