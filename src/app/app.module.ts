@@ -11,7 +11,12 @@ import { SidenavComponent } from './sidenav';
 import { ToolbarComponent } from './toolbar';
 import { SecondComponent } from './content/second';
 import { ThirdComponent } from './content/third';
-import { FourthComponent } from './content/fourth';
+import {
+  BlogComponent,
+  ReadingListTwentyOneComponent,
+  PostSelectorComponent,
+  BlogRoutingComponent
+} from './content/blog';
 import {
   GameReviewsComponent,
   GameReviewsRoutingComponent,
@@ -45,7 +50,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ToolbarComponent,
     SecondComponent,
     ThirdComponent,
-    FourthComponent,
+    BlogComponent,
     GameReviewsComponent,
     FooterComponent,
     HeaderComponent,
@@ -54,11 +59,14 @@ export class MyHammerConfig extends HammerGestureConfig {
     ReviewSelectorComponent,
     SixthComponent,
     LittleNightmaresTwoComponent,
+    BlogRoutingComponent,
     GameReviewsRoutingComponent,
     ReviewBannerComponent,
     ReviewCardComponent,
     ScorePieComponent,
-    HomeNavComponent
+    HomeNavComponent,
+    PostSelectorComponent,
+    ReadingListTwentyOneComponent
   ],
   imports: [
     BrowserModule,

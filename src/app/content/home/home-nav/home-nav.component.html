@@ -11,27 +11,27 @@
         </a>
       </li>
       <li>
-        <a [routerLink]="['/', AppRoutes.Second]">
+        <a (tap)="navigate(AppRoutes.Second)" [routerLink]="['/', AppRoutes.Second]">
           <h4>CV</h4>
         </a>
       </li>
       <li>
-        <a [routerLink]="['/', AppRoutes.Third]">
+        <a (tap)="navigate(AppRoutes.Third)" [routerLink]="['/', AppRoutes.Third]">
           <h4>Portfolio</h4>
         </a>
       </li>
       <li>
-        <a [routerLink]="['/', AppRoutes.Fourth]">
+        <a (tap)="navigate(AppRoutes.Blog)" [routerLink]="['/', AppRoutes.Blog]">
           <h4>Blog</h4>
         </a>
       </li>
       <li>
-        <a [routerLink]="['/', AppRoutes.GameReviews]">
+        <a (tap)="navigate(AppRoutes.GameReviews)" [routerLink]="['/', AppRoutes.GameReviews]">
           <h4>Game Reviews</h4>
         </a>
       </li>
       <li>
-        <a [routerLink]="['/', AppRoutes.Sixth]">
+        <a (tap)="navigate(AppRoutes.Sixth)" [routerLink]="['/', AppRoutes.Sixth]">
           <h4>Contact</h4>
         </a>
       </li>
@@ -39,7 +39,7 @@
   </div>
   <div class="spacer"></div>
 </div>
-<div *ngIf="!open" class="icon-container" (click)="openMenu()">
+<div *ngIf="!open" class="icon-container" (tap)="openMenu()" (click)="openMenu()">
     <span class="iconify" data-icon="ic:baseline-expand-less" data-inline="true"></span>
 </div>
 

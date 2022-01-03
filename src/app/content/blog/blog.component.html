@@ -1,0 +1,27 @@
+<div class="text-center">
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h1>Blog</h1>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>Welcome to my blog!</p>
+    <p>This is where I'll be writing about anything I'm interested in, particular achievements I'm proud of, or just anything I fancy discussing.</p>
+    <p>Expect posts on: gaming, particular books I've enjoyed reading, coffee related stuff, and I'll maybe put some tech blogs in here at some point too.</p>
+    <p>I hope you enjoy reading some of my thoughts on these topics. 
+      If you have any comments or want to discuss, then feel free to contact me through any of the options on the contact page.</p>
+  </mat-expansion-panel>
+
+  <hr>
+  
+  <div *ngFor="let postInfo of blogPostInfoArray;">
+    <app-post-selector
+      [imageURL]= "postInfo.imageURL"
+      [postTitle]= "postInfo.title"
+      [postDate]= "postInfo.date"
+      route= "{{postInfo.navRoute}}">
+    </app-post-selector>
+    <br>
+  </div>
+</div>

@@ -17,9 +17,24 @@
         </a>
       </li>
       <li>
-        <a routerLink="{{AppRoutes.Fourth}}" routerLinkActive #fourthActive="routerLinkActive">
-          <h2 [ngClass]="{'is-active': fourthActive.isActive}">Blog</h2>
-        </a>
+        <div class="flex-container">
+          <div style="flex:1;"></div>
+          <div style="flex:100;">
+            <a routerLink="{{AppRoutes.Blog}}" routerLinkActive #blogActive="routerLinkActive">
+              <h2 [ngClass]="{'is-active': blogActive.isActive}">Blog</h2>
+            </a>
+          </div>
+          <div style="flex:1;">
+            <mat-icon (click)="toggleSubList()" class="icon" >keyboard_arrow_down</mat-icon>
+          </div>
+        </div>
+        <ul *ngIf="subListOpen">
+          <li>
+            <a routerLink="{{AppRoutes.Blog}}/{{AppRoutes.ReadingList2021}}" routerLinkActive #readingList2021Active="routerLinkActive">
+              <h4 [ngClass]="{'is-active': readingList2021Active.isActive}">Reading List 2021</h4>
+            </a>
+          </li>
+        </ul>
       </li>
       <li>
         <div class="flex-container">

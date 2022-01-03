@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GameReviewsRoutingComponent } from './game-reviews-routing.component';
+import { PostSelectorComponent } from './post-selector.component';
 
-describe('GameReviewsRoutingComponent', () => {
-  let component: GameReviewsRoutingComponent;
-  let fixture: ComponentFixture<GameReviewsRoutingComponent>;
+describe('PostSelectorComponent', () => {
+  let component: PostSelectorComponent;
+  let fixture: ComponentFixture<PostSelectorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GameReviewsRoutingComponent ]
+      declarations: [ PostSelectorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GameReviewsRoutingComponent);
+    fixture = TestBed.createComponent(PostSelectorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

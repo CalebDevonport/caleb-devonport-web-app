@@ -3,7 +3,7 @@ import {
   HomeComponent,
   SecondComponent,
   ThirdComponent,
-  FourthComponent,
+  BlogComponent,
   GameReviewsComponent,
   GameReviewsRoutingComponent,
   LittleNightmaresTwoComponent,
@@ -11,6 +11,8 @@ import {
  } from './content';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BlogRoutingComponent } from './content/blog/routing/blog-routing.component';
+import { ReadingListTwentyOneComponent } from './content/blog/posts/reading-list-2021/reading-list-twenty-one.component';
 
 const routes: Routes = [
   {
@@ -31,8 +33,18 @@ const routes: Routes = [
     component: ThirdComponent
   },
   {
-    path: AppRoutes.Fourth,
-    component: FourthComponent
+    path: AppRoutes.Blog,
+    component: BlogRoutingComponent,
+    children: [
+      {
+        path: '',
+        component: BlogComponent
+      },
+      {
+        path: AppRoutes.ReadingList2021,
+        component: ReadingListTwentyOneComponent
+      }
+    ]
   },
   {
     path: AppRoutes.GameReviews,

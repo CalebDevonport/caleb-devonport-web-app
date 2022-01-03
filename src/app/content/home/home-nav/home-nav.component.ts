@@ -35,7 +35,7 @@ export class HomeNavComponent implements OnInit, OnDestroy {
 
   private destroy$: Subject<void> = new Subject<void>();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   onSwipeDown() {
     this.closeMenu();
@@ -58,5 +58,9 @@ export class HomeNavComponent implements OnInit, OnDestroy {
 
   closeMenu() {
     this.open = false;
+  }
+
+  public navigate(route: string) {
+    this.router.navigate(['/', route]);
   }
 }

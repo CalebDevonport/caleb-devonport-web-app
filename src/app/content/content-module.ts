@@ -4,25 +4,27 @@ import { NgModule } from '@angular/core';
 import { HomeComponent } from './home';
 import { SecondComponent } from './second';
 import { ThirdComponent } from './third';
-import { FourthComponent } from './fourth';
+import { BlogComponent, ReadingListTwentyOneComponent } from './blog';
 import { GameReviewsComponent, ReviewBannerComponent, ReviewSelectorComponent, LittleNightmaresTwoComponent } from './game-reviews';
 import { SixthComponent } from './sixth/sixth.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule } from '@angular/router';
 import { ContentWidthService } from '../services/content-width.service';
 import { CommonModule } from '@angular/common';
+import { AppModule } from '../app.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
     SecondComponent,
     ThirdComponent,
-    FourthComponent,
+    BlogComponent,
+    ReadingListTwentyOneComponent,
     GameReviewsComponent,
+    LittleNightmaresTwoComponent,
     ReviewBannerComponent,
     ReviewSelectorComponent,
     SixthComponent,
-    LittleNightmaresTwoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,4 +38,4 @@ import { CommonModule } from '@angular/common';
   providers: [],
   bootstrap: []
 })
-export class AppModule { }
+export class ContentModule { }

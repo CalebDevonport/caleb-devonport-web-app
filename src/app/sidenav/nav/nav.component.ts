@@ -1,5 +1,6 @@
 import { AppRoutes } from './../../routes';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -12,13 +13,17 @@ export class NavComponent implements OnInit {
 
   public subListOpen = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   public toggleSubList() {
     this.subListOpen = !this.subListOpen;
+  }
+
+  public navigate(route: string) {
+    this.router.navigate(['/', route]);
   }
 
 }
