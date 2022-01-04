@@ -2,23 +2,6 @@
   text-align: center;
 }
 
-.video-container {
-  position:relative;
-  padding-bottom:56.25%;
-}
-
-iframe {
-  width:100%;
-  height:100%;
-  position:absolute;
-  left:0px;
-  top:0px;
-}
-
-.card {
-  padding-bottom: 25px;
-}
-
 a {
   color: inherit;
 }
@@ -26,17 +9,6 @@ a {
 a:hover {
   color: darkgrey;
 }
-
-::ng-deep .mat-tooltip {
-  /* your own custom styles here */ 
-  /* e.g. */
-  color: yellow;
-}
-
-// ul {
-//   padding: none;
-//   margin: none;
-// }
 
 li {
   color: white
