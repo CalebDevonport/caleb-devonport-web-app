@@ -1,19 +1,20 @@
 import { ActivatedRoute, Router } from '@angular/router';
-import { MediaService } from '../../../../services/media-service';
+import { MediaService } from '../../../services/media-service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-review-selector',
-  templateUrl: './review-selector.component.html',
-  styleUrls: ['./review-selector.component.scss']
+  selector: 'app-post-selector',
+  templateUrl: './post-selector.component.html',
+  styleUrls: ['./post-selector.component.scss']
 })
-export class ReviewSelectorComponent implements OnInit {
+export class PostSelectorComponent implements OnInit {
 
   @Input() imageURL: string;
-  @Input() gameTitle: string;
-  @Input() reviewScore: string;
-  @Input() reviewDate: string;
+  @Input() title: string;
+  @Input() score: string;
+  @Input() date: string;
   @Input() route: string;
+  @Input() dateText: string;
 
   public isMobile: boolean;
 
@@ -32,5 +33,4 @@ export class ReviewSelectorComponent implements OnInit {
       this.router.navigate([this.route], {relativeTo: this.activatedRoute});
     }
   }
-
 }

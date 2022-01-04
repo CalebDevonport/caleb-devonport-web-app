@@ -17,13 +17,14 @@
   <hr>
   
   <div *ngFor="let reviewInfo of reviewInfoArray;">
-    <app-review-selector
-      [imageURL]= "reviewInfo.imageURL"
-      [gameTitle]= "reviewInfo.title"
-      [reviewScore]= "reviewInfo.score"
-      [reviewDate]= "reviewInfo.date"
-      route= "{{reviewInfo.navRoute}}">
-    </app-review-selector>
+    <app-post-selector
+      [imageURL]="reviewInfo.imageURL"
+      [title]="reviewInfo.title"
+      [score]="reviewInfo.score"
+      [date]="reviewInfo.date"
+      [dateText]="'Reviewed'"
+      [route]="reviewInfo.navRoute">
+    </app-post-selector>
     <br>
   </div>
 </div>

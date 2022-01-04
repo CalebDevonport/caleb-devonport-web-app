@@ -1,5 +1,5 @@
 import { AppRoutes } from './../../routes';
-import { BlogPostInfo } from './blog-post-info';
+import { PostInfo } from 'src/app/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  public blogPostInfoArray: BlogPostInfo[] = [
+  public blogPostInfoArray: PostInfo[] = [
     {
       navRoute: AppRoutes.ReadingList2021,
       title: 'Reading List 2021',

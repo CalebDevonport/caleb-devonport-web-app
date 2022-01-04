@@ -1,7 +1,7 @@
-export class ReviewInfo {
+export class PostInfo {
   title: string;
   imageURL: string;
-  score: string;
+  score?: string;
   date: string;
   navRoute: string;
 }

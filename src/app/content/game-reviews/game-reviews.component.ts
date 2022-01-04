@@ -1,6 +1,6 @@
-import { AppRoutes } from './../../routes';
-import { ReviewInfo } from './review-info';
+import { AppRoutes } from 'src/app/routes';
 import { Component, OnInit } from '@angular/core';
+import { PostInfo } from 'src/app/common';
 
 @Component({
   selector: 'app-game-reviews',
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameReviewsComponent implements OnInit {
 
-  public reviewInfoArray: ReviewInfo[] = [
+  public reviewInfoArray: PostInfo[] = [
     {
       navRoute: AppRoutes.LittleNightmares2,
       title: 'Little Nightmares 2',

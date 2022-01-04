@@ -11,16 +11,15 @@ import { SidenavComponent } from './sidenav';
 import { ToolbarComponent } from './toolbar';
 import { SecondComponent } from './content/second';
 import { ThirdComponent } from './content/third';
+import { PostSelectorComponent } from './common';
 import {
   BlogComponent,
   ReadingListTwentyOneComponent,
-  PostSelectorComponent,
   BlogRoutingComponent
 } from './content/blog';
 import {
   GameReviewsComponent,
   GameReviewsRoutingComponent,
-  ReviewSelectorComponent,
   ReviewCardComponent,
   ReviewBannerComponent,
   ScorePieComponent,
@@ -56,7 +55,6 @@ export class MyHammerConfig extends HammerGestureConfig {
     HeaderComponent,
     NavComponent,
     ImageViewerComponent,
-    ReviewSelectorComponent,
     SixthComponent,
     LittleNightmaresTwoComponent,
     BlogRoutingComponent,

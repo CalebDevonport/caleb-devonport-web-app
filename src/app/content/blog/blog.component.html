@@ -17,10 +17,11 @@
   
   <div *ngFor="let postInfo of blogPostInfoArray;">
     <app-post-selector
-      [imageURL]= "postInfo.imageURL"
-      [postTitle]= "postInfo.title"
-      [postDate]= "postInfo.date"
-      route= "{{postInfo.navRoute}}">
+      [imageURL]="postInfo.imageURL"
+      [title]="postInfo.title"
+      [date]="postInfo.date"
+      [dateText]="'Posted'"
+      [route]="postInfo.navRoute">
     </app-post-selector>
     <br>
   </div>
