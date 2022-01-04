@@ -39,8 +39,8 @@
   </div>
   <div class="spacer"></div>
 </div>
-<div *ngIf="!open" class="icon-container" (tap)="openMenu()" (click)="openMenu()">
-    <span class="iconify" data-icon="ic:baseline-expand-less" data-inline="true"></span>
+<div *ngIf="!open" class="icon-container" (click)="openMenu()" >
+  <span class="iconify" data-icon="ic:baseline-expand-less" data-inline="true"></span>
 </div>
 
 <div *ngIf="open" class="icon-container" (click)="closeMenu()">
