@@ -25,10 +25,10 @@
             </a>
           </div>
           <div style="flex:1;">
-            <mat-icon (click)="toggleSubList()" class="icon" >keyboard_arrow_down</mat-icon>
+            <mat-icon (click)="toggleBlogSubList()" class="icon" >keyboard_arrow_down</mat-icon>
           </div>
         </div>
-        <ul *ngIf="subListOpen">
+        <ul *ngIf="blogSubListOpen">
           <li>
             <a routerLink="{{AppRoutes.Blog}}/{{AppRoutes.ReadingList2021}}" routerLinkActive #readingList2021Active="routerLinkActive">
               <h4 [ngClass]="{'is-active': readingList2021Active.isActive}">Reading List 2021</h4>
@@ -45,10 +45,10 @@
             </a>
           </div>
           <div style="flex:1;">
-            <mat-icon (click)="toggleSubList()" class="icon" >keyboard_arrow_down</mat-icon>
+            <mat-icon (click)="toggleReviewSubList()" class="icon" >keyboard_arrow_down</mat-icon>
           </div>
         </div>
-        <ul *ngIf="subListOpen">
+        <ul *ngIf="reviewSubListOpen">
           <li>
             <a routerLink="{{AppRoutes.GameReviews}}/{{AppRoutes.LittleNightmares2}}" routerLinkActive #littleNightmaresTwoActive="routerLinkActive">
               <h4 [ngClass]="{'is-active': littleNightmaresTwoActive.isActive}">Little Nightmares 2</h4>

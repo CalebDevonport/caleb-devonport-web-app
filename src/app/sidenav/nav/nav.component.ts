@@ -11,15 +11,20 @@ export class NavComponent implements OnInit {
 
   public AppRoutes = AppRoutes;
 
-  public subListOpen = false;
+  public blogSubListOpen = false;
+  public reviewSubListOpen = false;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  public toggleSubList() {
-    this.subListOpen = !this.subListOpen;
+  public toggleBlogSubList() {
+    this.blogSubListOpen = !this.blogSubListOpen;
+  }
+
+  public toggleReviewSubList() {
+    this.reviewSubListOpen = !this.reviewSubListOpen;
   }
 
   public navigate(route: string) {
