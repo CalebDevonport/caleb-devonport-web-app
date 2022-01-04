@@ -1,13 +1,13 @@
 import { AppRoutes } from './routes';
 import {
   HomeComponent,
-  SecondComponent,
-  ThirdComponent,
+  CVComponent,
+  PortfolioComponent,
   BlogComponent,
   GameReviewsComponent,
   GameReviewsRoutingComponent,
   LittleNightmaresTwoComponent,
-  SixthComponent,
+  ContactComponent,
  } from './content';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -25,12 +25,12 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: AppRoutes.Second,
-    component: SecondComponent
+    path: AppRoutes.CV,
+    component: CVComponent
   },
   {
-    path: AppRoutes.Third,
-    component: ThirdComponent
+    path: AppRoutes.Portfolio,
+    component: PortfolioComponent
   },
   {
     path: AppRoutes.Blog,
@@ -61,8 +61,8 @@ const routes: Routes = [
     ]
   },
   {
-    path: AppRoutes.Sixth,
-    component: SixthComponent
+    path: AppRoutes.Contact,
+    component: ContactComponent
   },
   {
     path: '**',

@@ -9,8 +9,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './content/home';
 import { SidenavComponent } from './sidenav';
 import { ToolbarComponent } from './toolbar';
-import { SecondComponent } from './content/second';
-import { ThirdComponent } from './content/third';
+import { CVComponent } from './content/cv';
+import { PortfolioComponent } from './content/portfolio';
 import { PostSelectorComponent } from './common';
 import {
   BlogComponent,
@@ -29,7 +29,7 @@ import { FooterComponent } from './sidenav/footer';
 import { HeaderComponent } from './sidenav/header';
 import { NavComponent } from './sidenav/nav';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
-import { SixthComponent } from './content/sixth/sixth.component';
+import { ContactComponent } from './content/contact/contact.component';
 import { HomeNavComponent } from './content/home/home-nav/home-nav.component';
 import { ContentWidthService } from './services/content-width.service';
 import { CommonModule } from '@angular/common';
@@ -47,15 +47,15 @@ export class MyHammerConfig extends HammerGestureConfig {
     HomeComponent,
     SidenavComponent,
     ToolbarComponent,
-    SecondComponent,
-    ThirdComponent,
+    CVComponent,
+    PortfolioComponent,
     BlogComponent,
     GameReviewsComponent,
     FooterComponent,
     HeaderComponent,
     NavComponent,
     ImageViewerComponent,
-    SixthComponent,
+    ContactComponent,
     LittleNightmaresTwoComponent,
     BlogRoutingComponent,
     GameReviewsRoutingComponent,

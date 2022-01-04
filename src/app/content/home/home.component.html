@@ -1,4 +1,4 @@
-<div class="outer-aligner" #outerAligner (swipeup)="onSwipeUp()">
+<div class="outer-aligner" (swipeup)="onSwipeUp()">
   <div class="spacer"></div>
   <div class="aligner" #aligner>
     <div class="bio">
@@ -22,12 +22,12 @@
       </a>
     </li>
     <li class="list-item">
-      <a [routerLink]="['/', AppRoutes.Second]">
+      <a [routerLink]="['/', AppRoutes.CV]">
         <h4>CV</h4>
       </a>
     </li>
     <li class="list-item">
-      <a [routerLink]="['/', AppRoutes.Third]">
+      <a [routerLink]="['/', AppRoutes.Portfolio]">
         <h4>Portfolio</h4>
       </a>
     </li>
@@ -42,7 +42,7 @@
       </a>
     </li>
     <li class="list-item">
-      <a [routerLink]="['/', AppRoutes.Sixth]">
+      <a [routerLink]="['/', AppRoutes.Contact]">
         <h4>Contact</h4>
       </a>
     </li>

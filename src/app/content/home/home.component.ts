@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Observable, Subject, Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
 import { AppRoutes } from 'src/app/routes';
 import { MediaService } from 'src/app/services';
 import { ContentWidthService } from 'src/app/services/content-width.service';
