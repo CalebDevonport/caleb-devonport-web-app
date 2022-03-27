@@ -33,6 +33,7 @@ import { ContactComponent } from './content/contact/contact.component';
 import { HomeNavComponent } from './content/home/home-nav/home-nav.component';
 import { ContentWidthService } from './services/content-width.service';
 import { CommonModule } from '@angular/common';
+import { DestinyWitchQueenComponent } from './content/game-reviews/reviews/destiny-witch-queen';
 
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
@@ -57,6 +58,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ImageViewerComponent,
     ContactComponent,
     LittleNightmaresTwoComponent,
+    DestinyWitchQueenComponent,
     BlogRoutingComponent,
     GameReviewsRoutingComponent,
     ReviewBannerComponent,
@@ -74,7 +76,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     CommonModule,
     HammerModule
   ],
-  providers: [ContentWidthService,
+  providers: [
+    ContentWidthService,
     {
       provide: HAMMER_GESTURE_CONFIG,
       useClass: MyHammerConfig,

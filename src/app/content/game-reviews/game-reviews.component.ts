@@ -11,6 +11,13 @@ export class GameReviewsComponent implements OnInit {
 
   public reviewInfoArray: PostInfo[] = [
     {
+      navRoute: AppRoutes.DestinyWitchQueen,
+      title: 'Destiny 2: The Witch Queen',
+      score: '9.0',
+      date: '27/03/2022',
+      imageURL: 'assets/images/destiny-witch-queen-banner.jpg'
+    },
+    {
       navRoute: AppRoutes.LittleNightmares2,
       title: 'Little Nightmares 2',
       score: '8.0',

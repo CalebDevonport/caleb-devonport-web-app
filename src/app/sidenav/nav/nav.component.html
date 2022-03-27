@@ -50,6 +50,11 @@
         </div>
         <ul *ngIf="reviewSubListOpen">
           <li>
+            <a routerLink="{{AppRoutes.GameReviews}}/{{AppRoutes.DestinyWitchQueen}}" routerLinkActive #destinyWitchQueenActive="routerLinkActive">
+              <h4 [ngClass]="{'is-active': destinyWitchQueenActive.isActive}">Destiny 2: The Witch Queen</h4>
+            </a>
+          </li>
+          <li>
             <a routerLink="{{AppRoutes.GameReviews}}/{{AppRoutes.LittleNightmares2}}" routerLinkActive #littleNightmaresTwoActive="routerLinkActive">
               <h4 [ngClass]="{'is-active': littleNightmaresTwoActive.isActive}">Little Nightmares 2</h4>
             </a>

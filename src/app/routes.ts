@@ -6,5 +6,6 @@ export class AppRoutes {
   public static readonly ReadingList2021 = 'reading-list-2021';
   public static readonly GameReviews = 'game-reviews';
   public static readonly LittleNightmares2 = 'little-nightmares-2';
+  public static readonly DestinyWitchQueen = 'destiny-2-the-witch-queen';
   public static readonly Contact = 'contact';
 }
