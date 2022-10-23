@@ -23,7 +23,9 @@ import {
   ReviewCardComponent,
   ReviewBannerComponent,
   ScorePieComponent,
-  LittleNightmaresTwoComponent
+  LittleNightmaresTwoComponent,
+  DestinyWitchQueenComponent,
+  ScornComponent
 } from './content/game-reviews';
 import { FooterComponent } from './sidenav/footer';
 import { HeaderComponent } from './sidenav/header';
@@ -33,7 +35,6 @@ import { ContactComponent } from './content/contact/contact.component';
 import { HomeNavComponent } from './content/home/home-nav/home-nav.component';
 import { ContentWidthService } from './services/content-width.service';
 import { CommonModule } from '@angular/common';
-import { DestinyWitchQueenComponent } from './content/game-reviews/reviews/destiny-witch-queen';
 
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
@@ -59,6 +60,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ContactComponent,
     LittleNightmaresTwoComponent,
     DestinyWitchQueenComponent,
+    ScornComponent,
     BlogRoutingComponent,
     GameReviewsRoutingComponent,
     ReviewBannerComponent,

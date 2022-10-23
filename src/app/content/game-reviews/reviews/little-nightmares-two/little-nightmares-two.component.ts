@@ -22,6 +22,9 @@ export class LittleNightmaresTwoComponent implements OnInit {
 
   public score = 8.0;
 
+  public primaryColour = "#050e1b";
+  public secondaryColour = "#1f2f39";
+
   constructor() { }
 
   ngOnInit(): void {

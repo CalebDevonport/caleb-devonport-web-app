@@ -7,13 +7,14 @@ import {
   GameReviewsComponent,
   GameReviewsRoutingComponent,
   LittleNightmaresTwoComponent,
+  DestinyWitchQueenComponent,
+  ScornComponent,
   ContactComponent,
  } from './content';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogRoutingComponent } from './content/blog/routing/blog-routing.component';
 import { ReadingListTwentyOneComponent } from './content/blog/posts/reading-list-2021/reading-list-twenty-one.component';
-import { DestinyWitchQueenComponent } from './content/game-reviews/reviews/destiny-witch-queen';
 
 const routes: Routes = [
   {
@@ -62,6 +63,10 @@ const routes: Routes = [
       {
         path: AppRoutes.DestinyWitchQueen,
         component: DestinyWitchQueenComponent
+      },
+      {
+        path: AppRoutes.Scorn,
+        component: ScornComponent
       }
     ]
   },

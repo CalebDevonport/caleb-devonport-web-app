@@ -21,6 +21,9 @@ export class DestinyWitchQueenComponent implements OnInit {
 
   public score = 9.0;
 
+  public primaryColour = "#366656";
+  public secondaryColour = "#3f7663";
+
   constructor() { }
 
   ngOnInit(): void {

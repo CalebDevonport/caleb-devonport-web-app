@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ReviewCardComponent implements OnInit {
 
+  @Input() primaryColour: string;
+  @Input() secondaryColour: string;
   @Input() score: number;
   @Input() pros: string[];
   @Input() cons: string[];

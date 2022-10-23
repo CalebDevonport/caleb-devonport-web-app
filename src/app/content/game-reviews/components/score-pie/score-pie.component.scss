@@ -91,39 +91,79 @@ $rating-color-bad: #e74c3c;
     @include draw-progress(100, $rating-color-good);
   }
 
+  &.progress-95 {
+    @include draw-progress(95, $rating-color-good);
+  }
+
   &.progress-90 {
     @include draw-progress(90, $rating-color-good);
+  }
+
+  &.progress-85 {
+    @include draw-progress(85, $rating-color-good);
   }
 
   &.progress-80 {
     @include draw-progress(80, $rating-color-good);
   }
 
+  &.progress-75 {
+    @include draw-progress(75, $rating-color-good);
+  }
+
   &.progress-70 {
     @include draw-progress(70, $rating-color-good);
+  }
+
+  &.progress-65 {
+    @include draw-progress(65, $rating-color-good);
   }
 
   &.progress-60 {
     @include draw-progress(60, $rating-color-average);
   }
 
+  &.progress-55 {
+    @include draw-progress(55, $rating-color-good);
+  }
+
   &.progress-50 {
     @include draw-progress(50, $rating-color-average);
+  }
+
+  &.progress-45 {
+    @include draw-progress(45, $rating-color-good);
   }
 
   &.progress-40 {
     @include draw-progress(40, $rating-color-bad);
   }
 
+  &.progress-35 {
+    @include draw-progress(35, $rating-color-good);
+  }
+
   &.progress-30 {
     @include draw-progress(30, $rating-color-bad);
+  }
+
+  &.progress-25 {
+    @include draw-progress(25, $rating-color-good);
   }
 
   &.progress-20 {
     @include draw-progress(20, $rating-color-bad);
   }
 
+  &.progress-15 {
+    @include draw-progress(15, $rating-color-good);
+  }
+
   &.progress-10 {
     @include draw-progress(10, $rating-color-bad);
+  }
+
+  &.progress-5 {
+    @include draw-progress(5, $rating-color-good);
   }
 }
