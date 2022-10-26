@@ -4,11 +4,13 @@
     <div class="bio">
       <div>
         <h1>Hi. I'm Caleb.</h1>
-        <h4>I'm a full stack software engineer based in London, working primarily with .Net and Angular applications.</h4>
-        <h4>I like gaming, reading, coding, I'm a little bit obsessed with coffee, and I have 3 pet rats.</h4>
+        <h4>I'm a full stack software engineer working primarily with .Net and Angular applications. I live in St Albans and work in London. </h4>
+        <h4>I like gaming, reading, various other things, and I'm a little bit obsessed with coffee.</h4>
+        <h4>Welcome to my website.</h4>
       </div>
     </div>
-    <div class="portrait" #portrait style="max-width: 80%; margin-bottom: 15px;">
+    <div class="spacer" *ngIf="!isMobile"></div>
+    <div class="portrait" #portrait style="max-width: 80%;">
       <app-image-viewer [isCircular]="true" [imageURL]='"assets/images/Portrait.jpg"'></app-image-viewer>
     </div>
     <div class="icon-container">

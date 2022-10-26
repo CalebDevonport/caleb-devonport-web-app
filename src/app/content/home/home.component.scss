@@ -27,7 +27,7 @@
 @media (min-width: 768px) {
   .bio,
   .portrait {
-    width: 50%;
+    width: 49%;
   }
 }
 
@@ -56,12 +56,6 @@ a {
 
 a:hover > h4 {
   color: darkgrey;
-}
-
-@media (min-width: 768px) {
-  h1, h2, h4 {
-    margin-bottom: 0 !important;
-  }
 }
 
 .is-active {
