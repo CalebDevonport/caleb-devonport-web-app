@@ -9,9 +9,7 @@ export class ScornComponent implements OnInit {
 
   public pros = [
     'Art style',
-    'Incredible atmosphere',
-    'Visceral gore',
-    'Engaging puzzles'
+    'Incredible atmosphere'
   ];
 
   public cons = [

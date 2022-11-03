@@ -14,7 +14,7 @@ export class GameReviewsComponent implements OnInit {
       navRoute: AppRoutes.Scorn,
       title: 'Scorn',
       score: '8.0',
-      date: '23/10/2022',
+      date: '03/11/2022',
       imageURL: 'assets/images/scorn/banner.png'
     },
     {
