@@ -1,7 +1,7 @@
 steps:
 
   # Install node packages
-  - name: 'gcr.io/cloud-builders/npm'
+  - name: 'gcr.io/cloud-builders/npm:node-14.15.5'
     args: [ 'install' ]
 
   # Build productive files
