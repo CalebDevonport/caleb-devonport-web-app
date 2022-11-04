@@ -1,5 +1,5 @@
 <div *ngIf="open" [@navAnimation] class="nav-container" (swipedown)="onSwipeDown()">
-  <div class="icon-container exit" (click)="closeMenu()" (tap)="closeMenu()">
+  <div class="icon-container exit" (click)="closeMenu()">
     <span class="iconify" data-icon="ic:baseline-close" data-inline="true"></span>
   </div>
   <div class="spacer"></div>
@@ -11,27 +11,27 @@
         </a>
       </li>
       <!-- <li>
-        <a (tap)="navigate(AppRoutes.CV)" [routerLink]="['/', AppRoutes.CV]">
+        <a (click)="navigate(AppRoutes.CV)" [routerLink]="['/', AppRoutes.CV]">
           <h4>CV</h4>
         </a>
       </li>
       <li>
-        <a (tap)="navigate(AppRoutes.Portfolio)" [routerLink]="['/', AppRoutes.Portfolio]">
+        <a (click)="navigate(AppRoutes.Portfolio)" [routerLink]="['/', AppRoutes.Portfolio]">
           <h4>Portfolio</h4>
         </a>
       </li> -->
       <li>
-        <a (tap)="navigate(AppRoutes.Blog)" [routerLink]="['/', AppRoutes.Blog]">
+        <a (click)="navigate(AppRoutes.Blog)" [routerLink]="['/', AppRoutes.Blog]">
           <h4>Blog</h4>
         </a>
       </li>
       <li>
-        <a (tap)="navigate(AppRoutes.GameReviews)" [routerLink]="['/', AppRoutes.GameReviews]">
+        <a (click)="navigate(AppRoutes.GameReviews)" [routerLink]="['/', AppRoutes.GameReviews]">
           <h4>Game Reviews</h4>
         </a>
       </li>
       <li>
-        <a (tap)="navigate(AppRoutes.Contact)" [routerLink]="['/', AppRoutes.Contact]">
+        <a (click)="navigate(AppRoutes.Contact)" [routerLink]="['/', AppRoutes.Contact]">
           <h4>Contact</h4>
         </a>
       </li>
