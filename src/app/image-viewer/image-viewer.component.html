@@ -1,6 +1,33 @@
-<div *ngIf="open" class="viewer-container" (click)="toggleFullscreen()">
-  <div class="viewer-content">
-    <img class="main-img" [src]="imageURL"/>
+<div *ngIf="open" class="viewer-container no-select">
+  <ng-container *ngIf="!isSingleImage">
+    <div class="icon-section fullscreen" (click)="cycleLeft()">
+      <div><span class="iconify" data-icon="material-symbols:chevron-left" data-inline="true"></span></div>
+    </div>
+    <div class="icon-section right-section fullscreen" (click)="cycleRight()">
+      <div><span class="iconify" data-icon="material-symbols:chevron-right" data-inline="true"></span></div>
+    </div>
+  </ng-container>
+  <div class="viewer-content" (click)="toggleFullscreen()">
+    <img class="main-img" [src]="selectedImageURL"/>
+    <div class="image-text" *ngIf="!isSingleImage">
+      <p>Image {{currentIndex + 1}} of {{imageURLs.length}}</p>
+    </div>
   </div>
 </div>
-<div class="base-img" (click)="toggleFullscreen()"><img [ngClass]="{'circular': isCircular === true}" src={{imageURL}}></div>
+
+<div *ngIf="!open" class="main-container no-select">
+  <ng-container *ngIf="!isSingleImage">
+    <div class="icon-section" (click)="cycleLeft()">
+      <div><span class="iconify" data-icon="material-symbols:chevron-left" data-inline="true"></span></div>
+    </div>
+    <div class="icon-section right-section" (click)="cycleRight()">
+      <div><span class="iconify" data-icon="material-symbols:chevron-right" data-inline="true"></span></div>
+    </div>
+    <div class="image-text">
+      <p>Image {{currentIndex + 1}} of {{imageURLs.length}}</p>
+    </div>
+  </ng-container>
+  <div class="base-img" (click)="toggleFullscreen()">
+    <img [ngClass]="{'circular': isCircular === true}" src={{selectedImageURL}}>
+  </div>
+</div>

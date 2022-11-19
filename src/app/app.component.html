@@ -3,7 +3,7 @@
     <mat-sidenav *ngIf="!isHome" #sidenav [opened]="opened" [mode]="mode">
       <app-sidenav (toggleMenuEvent)="toggleMenu()"></app-sidenav>
     </mat-sidenav>
-    <mat-sidenav-content (swiperight)="onSwipeRight()" [ngClass]="{'enable-vert-scroll': !isHome}">
+    <mat-sidenav-content [ngClass]="{'enable-touch': !isHome}">
       <app-toolbar *ngIf="!isHome && isMobile" (toggleMenuEvent)="toggleMenu()"></app-toolbar>
       <div [ngClass]="{'mobile-padding': !isHome}" class="main-container">
         <div class="border"></div>

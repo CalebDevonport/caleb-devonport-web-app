@@ -31,6 +31,6 @@ mat-sidenav-container {
   flex:999;
 }
 
-.enable-vert-scroll {
-  touch-action: pan-y !important;
+.enable-touch {
+  touch-action: pan-y pan-x pinch-zoom !important;
 }

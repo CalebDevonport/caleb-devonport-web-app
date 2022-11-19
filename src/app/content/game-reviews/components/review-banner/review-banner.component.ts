@@ -24,6 +24,7 @@ export class ReviewBannerComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
+    this.imageURL = `assets/images/${this.imageURL}`;
     this.mediaService.match$.subscribe(isMobile => {
       this.isMobile = isMobile;
     });
