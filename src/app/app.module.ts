@@ -25,7 +25,8 @@ import {
   ScorePieComponent,
   LittleNightmaresTwoComponent,
   DestinyWitchQueenComponent,
-  ScornComponent
+  ScornComponent,
+  TheCallistoProtocolComponent
 } from './content/game-reviews';
 import { FooterComponent } from './sidenav/footer';
 import { HeaderComponent } from './sidenav/header';
@@ -61,6 +62,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     LittleNightmaresTwoComponent,
     DestinyWitchQueenComponent,
     ScornComponent,
+    TheCallistoProtocolComponent,
     BlogRoutingComponent,
     GameReviewsRoutingComponent,
     ReviewBannerComponent,

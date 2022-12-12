@@ -50,6 +50,11 @@
         </div>
         <ul *ngIf="reviewSubListOpen">
           <li>
+            <a routerLink="{{AppRoutes.GameReviews}}/{{AppRoutes.TheCallistoProtocol}}" routerLinkActive #theCallistoProtocolActive="routerLinkActive">
+              <h4 [ngClass]="{'is-active': theCallistoProtocolActive.isActive}">The Callisto Protocol</h4>
+            </a>
+          </li>
+          <li>
             <a routerLink="{{AppRoutes.GameReviews}}/{{AppRoutes.Scorn}}" routerLinkActive #scornActive="routerLinkActive">
               <h4 [ngClass]="{'is-active': scornActive.isActive}">Scorn</h4>
             </a>

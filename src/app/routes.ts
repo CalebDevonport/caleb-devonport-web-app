@@ -8,5 +8,6 @@ export class AppRoutes {
   public static readonly LittleNightmares2 = 'little-nightmares-2';
   public static readonly DestinyWitchQueen = 'destiny-2-the-witch-queen';
   public static readonly Scorn = 'scorn';
+  public static readonly TheCallistoProtocol = 'the-callisto-protocol';
   public static readonly Contact = 'contact';
 }

@@ -15,6 +15,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogRoutingComponent } from './content/blog/routing/blog-routing.component';
 import { ReadingListTwentyOneComponent } from './content/blog/posts/reading-list-2021/reading-list-twenty-one.component';
+import { TheCallistoProtocolComponent } from './content/game-reviews/reviews/the-callisto-protocol/the-callisto-protocol.component';
 
 const routes: Routes = [
   {
@@ -67,6 +68,10 @@ const routes: Routes = [
       {
         path: AppRoutes.Scorn,
         component: ScornComponent
+      },
+      {
+        path: AppRoutes.TheCallistoProtocol,
+        component: TheCallistoProtocolComponent
       }
     ]
   },
