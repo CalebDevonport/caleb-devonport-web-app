@@ -15,7 +15,7 @@ export class TheCallistoProtocolComponent implements OnInit {
 
   public cons = [
     'No new game plus',
-    'Not the game that people expected',
+    'Misleading marketing',
     'Bland story'
   ];
 
