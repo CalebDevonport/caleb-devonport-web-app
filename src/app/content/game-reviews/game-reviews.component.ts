@@ -15,7 +15,7 @@ export class GameReviewsComponent implements OnInit {
       title: 'The Callisto Protocol',
       score: '8.5',
       date: '12/12/2022',
-      imageURL: 'assets/images/the-callisto-protocol/banner.jpg'
+      imageURL: 'assets/images/the-callisto-protocol/banner.webp'
     },
     {
       navRoute: AppRoutes.Scorn,
