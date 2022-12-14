@@ -21,11 +21,15 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  background: transparent url(../../assets/images/loading.gif) center center no-repeat;
+}
+
+.base-img-container {
+  cursor: zoom-in;
 }
 
 .base-img {
-  cursor: zoom-in;
-  z-index: 1;
+  background: transparent url(../../assets/images/loading.gif) center center no-repeat;
 }
 
 .main-container {
@@ -92,8 +96,4 @@
 }
 .no-select:focus {
   outline: none !important;
-}
-
-.circular {
-  border-radius: 100%;
 }

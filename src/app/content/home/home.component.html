@@ -11,7 +11,7 @@
     </div>
     <div class="spacer" *ngIf="!isMobile"></div>
     <div class="portrait" #portrait style="max-width: 80%;">
-      <img src="assets/images/Portrait.jpg">
+      <img fetchpriority="high" src="assets/images/Portrait.jpg">
     </div>
     <div class="icon-container">
       <app-home-nav *ngIf="isMobile" [openMenuSubject]="openMenuSubject.asObservable()"></app-home-nav>

@@ -8,7 +8,7 @@
     </div>
   </ng-container>
   <div class="viewer-content" (click)="toggleFullscreen()">
-    <img class="main-img" [src]="selectedImageURL"/>
+    <img class="main-img" *ngIf="shouldShow" src={{selectedLargeImageURL}} />
     <div class="image-text" *ngIf="!isSingleImage">
       <p>Image {{currentIndex + 1}} of {{imageURLs.length}}</p>
     </div>
@@ -27,7 +27,7 @@
       <p>Image {{currentIndex + 1}} of {{imageURLs.length}}</p>
     </div>
   </ng-container>
-  <div class="base-img" (click)="toggleFullscreen()">
-    <img [ngClass]="{'circular': isCircular === true}" src={{selectedImageURL}}>
+  <div class="base-img-container" [ngStyle]="{'aspect-ratio':aspectRatio}" (click)="toggleFullscreen()">
+    <img class="base-img" src={{selectedImageURL}} *ngIf="shouldShow" loading="lazy">
   </div>
 </div>
