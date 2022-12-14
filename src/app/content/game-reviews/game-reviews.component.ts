@@ -22,7 +22,7 @@ export class GameReviewsComponent implements OnInit {
       title: 'Scorn',
       score: '8.0',
       date: '03/11/2022',
-      imageURL: 'assets/images/scorn/banner.png'
+      imageURL: 'assets/images/scorn/banner.webp'
     },
     {
       navRoute: AppRoutes.DestinyWitchQueen,
