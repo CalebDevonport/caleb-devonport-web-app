@@ -21,7 +21,8 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  background: transparent url(../../assets/images/loading.gif) center center no-repeat;
+  background: none;
+  animation: loading 10s linear;
 }
 
 .base-img-container {
@@ -29,7 +30,20 @@
 }
 
 .base-img {
-  background: transparent url(../../assets/images/loading.gif) center center no-repeat;
+  background: none;
+  animation: loading 10s linear;
+}
+
+@keyframes loading {
+  0% {
+    background: none;
+  }
+  5% {
+    background: transparent url(../../assets/images/loading.gif) center center no-repeat;
+  }
+  100% {
+    background: transparent url(../../assets/images/loading.gif) center center no-repeat;
+  }
 }
 
 .main-container {
